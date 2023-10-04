@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+parts:
+  - caption: Numerical Linear Algebra
+    numbered: 3
+    chapters:
+    - file: NUMERICAL_LINALG/lecture_notes/LEC01_SEP28.md
+    - file: NUMERICAL_LINALG/lecture_notes/LEC02_OC3.md
+  - caption: Applied Algebra (Matrix Analysis)
+    numbered: 3
+    chapters:
+    - file: Applied_Algebra/lecture_notes/LEC02_OCT2.md
+  - caption: Complex Analysis
+    numbered: 3
+    chapters:
+    - file: Complex_Analysis/lecture_notes/LEC01_OCT2.md
+    - file: Complex_Analysis/lecture_notes/LEC02_OCT4.md
