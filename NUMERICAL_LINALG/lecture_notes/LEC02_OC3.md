@@ -7,7 +7,7 @@ $$
 \end{bmatrix}
 $$
 
-If $A = A^* \in \Complex^{m\times n}$, then A is called a **Hermitian matrix**.
+If $A = A^* \in \C^{m\times n}$, then A is called a **Hermitian matrix**.
 
 If $A \in \R^{m\times m}$, $A^* = A^T$.
 

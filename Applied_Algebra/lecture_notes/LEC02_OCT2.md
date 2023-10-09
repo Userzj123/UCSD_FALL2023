@@ -91,7 +91,7 @@ satisfies
 4. Commutativity
 
 Example:
-$x=\Complex^n$ over $\Complex$, then
+$x=\C^n$ over $\C$, then
 $\langle x, y\rangle = - y^{H} x$
 
 

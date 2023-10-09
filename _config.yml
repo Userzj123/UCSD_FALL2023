@@ -33,7 +33,11 @@ sphinx:
           "emat" : ["\\end{array}\\right]"]
           "dd": "\\mathrm{d}"
           "ii": "\\mathrm{i}"
-          "Complex": "\\mathbb{C}"
+          "C": "\\mathbb{C}"
+          "R": "\\mathbb{R}"
+          "RE": "\\text{Re}"
+          "IM": "\\text{Im}"
+          "dag": "\\dagger"
   extra_extensions:
     - sphinx_proof
 parse:
@@ -51,3 +55,4 @@ html:
   use_issues_button: true
   use_repository_button: true
   use_multitoc_numbering: false
+  
