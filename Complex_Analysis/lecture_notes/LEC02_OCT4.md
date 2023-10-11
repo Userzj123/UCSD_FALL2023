@@ -4,26 +4,29 @@ Content -- Convay III 1, III 2.
 2. e^z, sinz, cosz, logz
 
 ## Power series and Analytic Functions
-$c \in \C$, $a_n \in \C$
-
-$$
-f(z) = \sum_{n = 0}^\infty a_n (z - c)^n
-$$ (eq:complex_power_series)
-
-```{prf:theorem} Power Series of Complex Functions
-:label: theorem_convergence
-$\exists radius of convergence $R$, 0\le R \le \infty$, s.t.,
-1. if $|z-c|< R$ then {eq}`eq:complex_power_series` converges absolutely and locally uniformly.
-1. if $|z-c| > R$ then {eq}`eq:complex_power_series` diverges. Moreover, $\displaystyle R^{-1} = \limsup_{n\rightarrow \infty} \sqrt[n]{|a_n|}$
-```
-
 ```{prf:definition} Analytic Function
-$f:u\rightarrow \C$ is analytic if $\forall z \in u \exists R>0$ s.t.,
+$f:u\rightarrow \C$ is analytic if $\forall z \in u,  \exists R>0$ and $\{a_n\}$ s.t.,
 
 $$
 f(z) = \sum_{n = 0}^\infty a_n (z - z_0)^n \text{ in } \Delta(z_0, R)\subseteq u
 $$
 ```
+
+
+````{prf:theorem} Power Series of Complex Functions
+:label: theorem_convergence
+Given $c \in \C$, $a_n \in \C$, we could use a power series to represent function $f(z)$,
+
+$$
+f(z) = \sum_{n = 0}^\infty a_n (z - c)^n.
+$$ (eq:complex_power_series)
+
+$\exists$ radius of convergence $R\in [0, \infty]$, s.t.,
+1. if $|z-c|< R$ then {eq}`eq:complex_power_series` converges absolutely and locally uniformly.
+1. if $|z-c| > R$ then {eq}`eq:complex_power_series` diverges. Moreover, $\displaystyle R^{-1} = \limsup_{n\rightarrow \infty} \sqrt[n]{|a_n|}$
+
+
+
 
 (proof_complex_power_series_convergence)=
 ```{prf:proof} Convergence
@@ -40,7 +43,7 @@ $$
 \end{aligned}
 $$
 
-Recall the Weierstrass M-test
+Recall the **Weierstrass M-test**
 > $|f_n|\le M_n, \sum_n M_n < \infty$ then $\sum_n f_n$ converges absolutely and uniformly.
 
 $\Longrightarrow \sum_n a_n z^n$ converge absolutely and uniformly in $\Delta(0, r)$.
@@ -63,11 +66,14 @@ $$
 $$
 ```
 
-
-
 ```{prf:remark} (Rudin III.38)
-If $\alpha = \lim_{n\rightarrow \infty} \left| \frac{a_{n+1}}{a_n}\right| = \text{exists, then } R=\alpha^{-1}$.
+If $\displaystyle\alpha = \lim_{n\rightarrow \infty} \left| \frac{a_{n+1}}{a_n}\right| = \text{exists, then } R=\alpha^{-1}$.
 ```
+
+````
+
+
+
 
 ### Differentiation of power series
 
@@ -121,7 +127,7 @@ $$
 ```
 
 
-## Exponential
+### Examples of analytical function: $\exp, \cos, \sin$
 
 Example:
 1. $e^z = \sum_{n = 0}^\infty \frac{z^n}{n!}$ converges for $z\in\C$.
@@ -137,7 +143,7 @@ $sin^2   $
 Ex. $\cos{(\pi\mathrm{i}n)} \rightarrow \infty$.
 
 
-## Logarithm
+#### Logarithm
 $e^{2\pi\mathrm{i}n} = 1$, thus
 
 $$
@@ -146,7 +152,7 @@ $$
 
 which value should be picked?
 
-### Example a
+*Example a*
 ```{prf:definition}
 :label: def-3
 $u \subseteq \C \\ \{0\}$
