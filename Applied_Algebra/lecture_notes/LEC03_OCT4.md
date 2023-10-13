@@ -1,3 +1,4 @@
+# Lec03
 *Proposition*:
 Given $x_1, x_2, \dots, x_n$ linear independence in inner product space, then $\exists\, y_1, y_2, \dots, y_n$ orthogonal s.t.
 1. span $\{y_1, y_2, \dots, y_n\}$ = span $\{x_1, x_2, \dots, x_n\}$

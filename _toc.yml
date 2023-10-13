@@ -5,17 +5,35 @@ format: jb-book
 root: README
 parts:
   - caption: Numerical Linear Algebra
-    numbered: 3
+    numbered: True
     chapters:
     - file: NUMERICAL_LINALG/lecture_notes/LEC01_SEP28.md
+      title: Numerical Linear Algebra Lec01
     - file: NUMERICAL_LINALG/lecture_notes/LEC02_OC3.md
+      title: Numerical Linear Algebra Lec02
   - caption: Applied Algebra (Matrix Analysis)
-    numbered: 3
+    numbered: True
     chapters:
+    - file: Applied_Algebra/lecture_notes/LEC01_SEP28.md
+      title: Applied Algebra Lec01
     - file: Applied_Algebra/lecture_notes/LEC02_OCT2.md
+      title: Applied Algebra Lec02
     - file: Applied_Algebra/lecture_notes/LEC03_OCT4.md
+      title: Applied Algebra Lec03
+    - file: Applied_Algebra/lecture_notes/LEC04_OCT6.md
+      title: Applied Algebra Lec04
+    - file: Applied_Algebra/lecture_notes/LEC05_OCT9.md
+      title: Applied Algebra Lec05
+    - file: Applied_Algebra/lecture_notes/LEC06_OCT11.md
+      title: Applied Algebra Lec06
   - caption: Complex Analysis
-    numbered: 3
+    numbered: True
     chapters:
     - file: Complex_Analysis/lecture_notes/LEC01_OCT2.md
+      title: Complex Analysis Lec01
     - file: Complex_Analysis/lecture_notes/LEC02_OCT4.md
+      title: Complex Analysis Lec02
+    - file: Complex_Analysis/lecture_notes/LEC03_OCT9.md
+      title: Complex Analysis Lec03
+    - file: Complex_Analysis/lecture_notes/LEC04_OCT11.md
+      title: Complex Analysis Lec04

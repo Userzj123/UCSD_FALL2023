@@ -41,8 +41,8 @@ sphinx:
           "F": "\\mathbb{F}"
           "if": "\\text{if }"
           "for": "\\text{for }"
-          "span": "\\text{span}\\{#1\\}"
-          "series": "#1_1, #1_2, \dots, #1_#2"
+          "span": ["\\text{span}\\{#1\\}", 1]
+          "series": ["#1_1, #1_2, \\dots, #1_{#2}", 2]
   extra_extensions:
     - sphinx_proof
 parse:
