@@ -38,6 +38,11 @@ sphinx:
           "RE": "\\text{Re}"
           "IM": "\\text{Im}"
           "dag": "\\dagger"
+          "F": "\\mathbb{F}"
+          "if": "\\text{if }"
+          "for": "\\text{for }"
+          "span": "\\text{span}\\{#1\\}"
+          "series": "#1_1, #1_2, \dots, #1_#2"
   extra_extensions:
     - sphinx_proof
 parse:
