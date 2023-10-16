@@ -1,4 +1,5 @@
-# preliminaries
+# Introduction
+## Preliminaries
 Let $\displaystyle A = (a_{ij})\in \underbrace{M_{m,n}(\C)}_{\C^{m, n}}$ be an $m\times n$ matrix with elements in $\C$. Let $x\in \C^n$, then 
 
 $$
