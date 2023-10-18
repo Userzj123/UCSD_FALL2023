@@ -26,6 +26,10 @@ parts:
       title: Applied Algebra Lec05
     - file: Applied_Algebra/lecture_notes/LEC06_OCT11.md
       title: Applied Algebra Lec06
+    - file: Applied_Algebra/lecture_notes/LEC07_OCT13.md
+      title: Applied Algebra Lec07
+    - file: Applied_Algebra/lecture_notes/LEC08_OCT16.md
+      title: Applied Algebra Lec08
   - caption: Complex Analysis
     numbered: True
     chapters:
