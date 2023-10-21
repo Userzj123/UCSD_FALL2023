@@ -97,7 +97,7 @@ Induction on k
         Ax_r & = \sum_{j=1}^{r-1}\beta_j Ax_j\\
         \lambda_r x_r & = \sum_{j=1}^{r-1} \beta_j \lambda_j x_j\\
         \lambda_r \sum_{j=1}^{r-1}\beta_j x_j & = \sum_{j=1}^{r-1} \beta_j \lambda_j x_j\\
-        \sum_{j=1}^{r-1}beta_j (\lambda_r - \lambda_j)x_j &= 0,
+        \sum_{j=1}^{r-1}\beta_j (\lambda_r - \lambda_j)x_j &= 0,
     \end{aligned}
     $$
 
