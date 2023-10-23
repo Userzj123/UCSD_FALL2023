@@ -1,6 +1,6 @@
 # Lec08
 
-*sidenote*
+```{prf:definition}
 If $T\in $ inner product space $\mathcal{L}(X, X)$, then
 
 $$
@@ -8,6 +8,9 @@ $$
 $$
 
 in which $T^*\in \mathcal{L}(X, X)$ is the adjoint of $T$.
+```
+
+
 
 Let $X \in \C^n$, $T$ matrix is the same as multiplied by $A$,
 
@@ -23,30 +26,32 @@ in which $A^H$ is the hermitian adjoint of $A$. Furthermore, eigenvectors of $A$
 - $\displaystyle\det(A) = P_A(0) = \prod_{\lambda \in \sigma(A)}\lambda$
 
 
-Also from complex analysis, if $A \in M_n(\R)$ then $P_A(\alpha)=0$ has real coefficients. Then the nonreal eigenvalues come in complex conjugate pairs.
+> From complex analysis, if $A \in M_n(\R)$ then $P_A(\alpha)=0$ has real coefficients. Then the nonreal eigenvalues come in complex conjugate pairs.
 
 Given $\lambda$ eigenvalue, its eigenvectors all belong to null space of $(A-\lambda I)$
 
-*definition*
+````{prf:definition}
 We define **geometric multiplicity**,
 
 $$
 \gm(\lambda) = \dim(\null(A-\lambda I)),
 $$
 
-which refers to the number of linear independent eigenvectors there are for $\lambda$.
+which refers to *the number of linear independent eigenvectors there are for $\lambda$*.
 
 *note*: corresponding left and right eigenvalues will have same geometric multiplicity.
 
-*example* 
+```{prf:example}
 $A = \begin{bmatrix}
     1 & 1\\ 0 & 1
 \end{bmatrix} $ has $\am(1) = 2, \gm(1) = 1$.
+```
+````
 
-*proposition*
+````{prf:proposition}
 $\gm(\lambda) \le \am(\lambda)$ for $\lambda$ an eigenvalue of $A\in M_n(\C)$.
 
-*proof*
+```{prf:proof}
 let $r = \gm(\lambda)$, then $\exists$ basis $x_1, \dots, x_r$ of $\null(A-\lambda I)$. Let $X_1 = \begin{bmatrix} x_1, \dots, x_r \end{bmatrix}\in M_{n, r}(\C)$.  Extend this basis to all of $\C^n$: $\exists X_2\in M_{n, n-r}(\C)$, s.t. $X = [X_1, X_2]$ has linear independent columns.
 
 Note $AX_1 = \lambda X_1I_r$, so 
@@ -63,24 +68,31 @@ $$
 
 $\am(\lambda)\ge r$ for $X^{-1}AX$ but $\sigma(A) = \sigma(X^{-1}AX)$, so $\am(\lambda) \ge r$ for $A$.
 
-**Rank Multiplicity Theorem**
+```
+````
+
+```{prf:definition} **Rank Multiplicity Theorem**
 $\rank(A-\lambda I) \ge n - \am(\lambda)$ for an eigenvalue $\lambda$ of $A\in M_n(\C)$.
+```
 
 
+````{prf:definition}
 We call $\lambda \in \sigma(A)$ a **defective eigenvalue** if $\am(\lambda)\gt \gm(\lambda)$. Otherwise, **nondefective**.
 
 
 We call $A\in M_n (\C)$ **defective** if it has at least one defective eigenvalue. Otherwise, **nondefective**.
 
-*example*
+```{prf:example}
 
 - defective $\begin{bmatrix} 1 & 1\\ 0 & 1\end{bmatrix}$ 
 - nondefective $\begin{bmatrix} 1 & 0\\ 0 & 1\end{bmatrix}$
+```
+````
 
-*proposition*
+````{prf:proposition}
 Let $A\in M_n(\C)$ and suppose $\series{x}{n}$ are eigenvectors correspond to $\series{\lambda}{n}$, all distinct. Then, $\series{x}{n}$ are linear independent.
 
-*proof*
+```{prf:proof}
 Induction on k
 - Initial induction step: k=1
 
@@ -102,8 +114,10 @@ Induction on k
     $$
 
     Induction hypothesis says $\beta_j(\lambda_r - \lambda_j) = 0$ for all $1\le j \le r-1$. In this case, $\lambda_r = \lambda_j$, which contradicts the assumption of distinct eigenvalues.
+```
+````
 
----
+
 *Note*
 1. If $A$ has distinct eigenvalues $\series{\lambda}{n}$ then corresponding eigenvectors $\series{x}{n}$ are linear independent and unique up to scalar multiplication.
 2. $\series{\lambda}{n}$ distinct and corresponding eigenvectors are linear independent ( might have more than one corresponding eigenvectors for one eigenvalue).

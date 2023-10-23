@@ -1,4 +1,4 @@
-## Lec04
+# Lec04
 $T: X\rightarrow Y$
 
 injection: T is 1-1 if T(x) = T(y)

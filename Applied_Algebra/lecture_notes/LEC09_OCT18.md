@@ -1,6 +1,11 @@
 # LEC09
+## 1.4 Left and right eigenvectors and geometric multiplicity
+
+````{prf:definition}
 Non-defective matrix $A\in M_n(\C)$  has $n$ linear independent eigenvectors and is diagonalizable.
 
+
+```{prf:proof}
 Suppose $A$ diagonalizable, $\exists X \in M_n(\C)$ invertible s.t. $X^{-1}AX = \Lambda$, so columns of $X$ are eigenvectors since $Ax_j = \lambda_j x_j$ and columns are linearly independent.
 
 Since $\gm(\lambda)\le \am(\lambda)$, $\sum_{\lambda \in \sigma(A)} \am(\lambda) = n$ and $\sum_{\lambda \in \sigma(A)} \gm(\lambda) = n$ (there are $n$ linearly independent eigenvectors), then 
@@ -15,15 +20,16 @@ Altogether, we have TFAE
 - $A$ has $n$ linearly independent eigenvectors
 - $A$ is diagonalizable.
 
-(defective matrix cannot be diagonalized)??
-
+(defective matrix cannot be diagonalized)
+```
+````
 If $A$ diagonalizable then 
 
 $$
 X^{-1}AX = \Lambda,
 $$
 
-in which rows of $X^{-1}$ are Hermitian transpose of left eigenvector and columns of $X$ are the eigenvectors,
+in which rows of $X^{-1}$ are Hermitian transpose of left eigenvector and columns of $X$ are the eigenvectors. Furthermore,
 
 $$
 \begin{aligned}
@@ -40,19 +46,16 @@ $$
 
 so $y^H_ix_j = 0, \;\if i\neq j$. Thus, left and right eigenvectors satisfy bi-orthogonal relationship.
 
-Furthermore, if $A$ diagonalizable, then
+On the other hand, if $A$ diagonalizable, $A$ can also be expressed as a sum of **principle components**,
 
 $$
 \begin{aligned}
-    A = X\Lambda X^{-1} & = \sum_{i=1}^n \lambda_i x_i y^H_i,
+    A = X\Lambda X^{-1} & = \sum_{i=1}^n \lambda_i x_i y^H_i.
 \end{aligned}
 $$
  
-which is a sum of **principle components**.
 
-
-Usage of diagonal matrix:
-*example* power method basis
+```{prf:example} Usage of diagonal matrix - power method basis
 $A$, suppose eigenvalues $|\lambda_1|\ge |\lambda_2| \ge \dots |\lambda_n|$ and corresponding eigenvectors. Assuming $A$ diagonalizable, pick $x=\sum_{i=1}^n \alpha_i x_i$, then 
 
 $$
@@ -63,11 +66,17 @@ A^kx & = \sum_{i=1}^n \alpha_i A^k x_i\\
 \end{aligned}
 $$
 
+```
+
+
+## 2.0 Introduction
 Consider other $X^{-1}A X = B$, we want:
 - B still nice
 - A general
 - X nice
 
+
+```{prf:definition}
 We called $A\in M_n(\C)$ a **block upper triangular** matrix iff 
 
 $$
@@ -85,6 +94,8 @@ $n_i=1$ for all $1\le i\le k \Rightarrow$ A is **upper triangular** matrix. Same
 
 If A is either block upper or lower matrix, then we call $A$ **block triangular** and similarly for **triangular**.
 
+```
+
 If $A$ block triangular, then
 
 $$
@@ -98,10 +109,13 @@ $$
 P_A(\alpha) = P_{A_{11}}(\alpha)\dots P_{A_{kk}}(\alpha)
 $$
 
-
+```{prf:definition}
 We define $A, B \in M_n(\C)$ to be **unitarily equivalence** if $B = U^HAU$, where $U$ is a **unitary matrix**, meaning $U^{-1} = U^H$ or $U$ has orthonormal columns.
+```
 
-**Principle of deflation**
+
+## 2.3 Unitary and real orthogonal triangularizations
+````{prf:definition} **Principle of deflation**
 Let $A\in M_n(\C)$, and $\sigma(A) = \{\series{\lambda}{n}\}$, as multiset. Then $\exists$ unitary $Q$ s.t.
 
 $$
@@ -111,7 +125,7 @@ Q^{-1}AQ = \begin{bmatrix}
 $$
 
 
-*proof*
+```{prf:proof}
 Let $x_1$ be an eigenvector of $\lambda_1$ satisfying $x_1^Hx_1 = 1$. Now extend to orthonormal basis, $\begin{bmatrix} x_1 & U \end{bmatrix} = Q$. Note:
 - $U^Hx_1 = 0$
 - $U^HU = I$
@@ -141,3 +155,5 @@ Q^HAQ = \begin{bmatrix}
     & & & \lambda_n
 \end{bmatrix}
 $$
+```
+````

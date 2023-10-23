@@ -1,21 +1,24 @@
-Last time we did the work for **Schur Decomposition**
+# Lec10
+## Schur Decomposition
+```{prf:definition} **Schur Decomposition**
 If $A \in M _n(\C)$, $\series{\lambda}{n}$ are chosen as eigenvalues of $A$, then $\exists$ unitary $Q\in M_n(\C)$ s.t. $Q^HAQ = T$ for $T$ as a upper triangular matrix and $t_{ii} = \lambda_i$, for all $1\le i\le n$.
 
 The columns of $Q$ are called **Schur vectors**.
+```
 
-*Important application*
-Consider $A\in M_n(\C)$, vector space dimension of which is $n^2$. Take $I, A, A^2, \dots, A^{n^2}$, $n^2+1$ elements in total, which are linearly dependent. So $\exists \series{\alpha}{n^2}$ not all zero s.t. the matrix polynomial equal to zero, $\sum_{j=1}^{n^2} \alpha_j A^j =0$.
+
+Consider $A\in M_n(\C)$, vector space (dimension is $n^2$). Take $I, A, A^2, \dots, A^{n^2}$, $n^2+1$ elements in total, which are linearly dependent. So $\exists \series{\alpha}{n^2}$ not all zero s.t. the matrix polynomial equal to zero, $\sum_{j=1}^{n^2} \alpha_j A^j =0$.
 
 
 What about smaller degree polynomials?
-**Cauchy-Hamilton Theorem**
+````{prf:definition} **Cauchy-Hamilton Theorem**
 Let $A \in M_n(\C)$ with $\sigma(A) = \{\series{\lambda}{n}\}$ and consider the  characteristic polynomial $P_A(\alpha) = \det(A-\alpha I)$. Then, 
 
 $$
 P_A(A) = 0.
 $$
 
-*proof*
+```{prf:proof}
 Let $Q^HAQ = T$ be the Schur decomposition of $A$ where $t_{ii} = \lambda_i$ for all $1\le i \le n$. Then $A = QTQ^H$ and 
 
 $$
@@ -54,20 +57,25 @@ $$
     A^{-1} & = \frac{((-1)^n A^{n-1} + \beta_{n-1} A^{n-2} + \dots + \beta_1)}{-\beta_0}
 \end{aligned}
 $$
+```
+````
 
-*Summary*
+### Summary
 
-- If A nondefective then $\exist X$ invertible s.t. $X^{-1}AX = \Lambda$.
+- If A nondefective then $\exists X$ invertible s.t. $X^{-1}AX = \Lambda$.
 - For any $A$, $\exists$ unitary $Q$ s.t. $Q^HAQ = T$, in which $T$ is a upper triangular matrix.
 
-*Tools*
+
+### 2.4.4 Sylvester's theorem on linear matrix equations
+```{prf:definition} Invariant
 For $A \in M_n(\C)$ and a subspae $S\subseteq \C^n$, we call $S$ **invariant** iff 
 
 $$
 x\in S \Rightarrow Ax \in S.
 $$
+```
 
-*example*
+```{prf:example}
 Eigenspaces of eigenvalues $\lambda: \null(A-\lambda I)$ are invariant under $A$, since if $x\in \null(A-\lambda I), Ax = \lambda x \in \null(A-\lambda I)$. In fact, the span of any set of linearly independent eigenvectors is also an invariant subspace.
 
 Given $x_1,\dots, x_k$ a basis for subspace $S$, then
@@ -75,6 +83,8 @@ Given $x_1,\dots, x_k$ a basis for subspace $S$, then
 $$
 S\text{ invariant } \Longleftrightarrow Ax_j \in S, 1\le j\le k.
 $$
+```
+
 
 Let $X = [\series{x}{k}]\in M_{n, k}(\C)$, so we can write
 
@@ -101,8 +111,8 @@ $$
     & = Y \begin{bmatrix}
         B & Y_{12} \\ 0 & Y_{22}
     \end{bmatrix}\\
-    Y^{-1}AY &= \begin{bmatrix} B & Y_{12} \\ 0 & Y_{22} \end{bmatrix}
+    Y^{-1}AY &= \begin{bmatrix} B & Y_{12} \\ 0 & Y_{22} \end{bmatrix},
 \end{aligned}
 $$
 
-, right hand side of which is a block upper triangular matrix, so that $\sigma(A) = \sigma(B) \cup \sigma(Y_{22})$ as multi-sets.
+right hand side of which is a block upper triangular matrix, so that $\sigma(A) = \sigma(B) \cup \sigma(Y_{22})$ as multi-sets.

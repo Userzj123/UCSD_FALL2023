@@ -1,4 +1,5 @@
 # Linear Independent
+```{prf:definition} Linear Independence
 If $x_1, x_2, \dots x_n$ are not linearly dependent, then they are **linearly independent**,
 
 $$
@@ -7,35 +8,24 @@ $$
 
 which means there are no redundancies in $x_1, x_2, \dots x_n$.
 
-*note*
-sometimes, consider linear dependence of $\underbrace{\{x_1, x_2, \dots x_n\}}_{\text{multiset}}$. For example,
+```
 
-$$
-\begin{Bmatrix}
-\begin{bmatrix}
-    1\\0
-\end{bmatrix},
-\begin{bmatrix}
-    1\\\alpha
-\end{bmatrix}
-\end{Bmatrix}
-, \quad \alpha \rightarrow 0
-$$
+*note*
+sometimes, consider linear dependence of $\underbrace{\{x_1, x_2, \dots x_n\}}_{\text{multiset}}$. For example, $\begin{Bmatrix}\begin{bmatrix} 1\\0 \end{bmatrix}, \begin{bmatrix} 1\\\alpha \end{bmatrix} \end{Bmatrix}, \; \alpha \rightarrow 0$.
 
 
 If $X = \span{x_1, x_2, \dots x_n}$ and if $x_1, x_2, \dots x_n$ linear independent, then $x_1, x_2, \dots x_n$ is a **basis** of $X$.
 
-Note:
+```{note}
 Bases are not unique. However, **all bases have the same number of elements**.
+```
 
-*preposition*
+````{prf:proposition}
 Let $\mathcal{X} = \text{span}\{x_1, x_2, \dots x_n\}$ linear independent, then for $k>n$, any choise of $y_1, y_2, \dots, y_n \in \mathcal{X}$ is linear dependent.
 
 
-
-*proof*
-*induction & gaussian elimination*
-Induction on n
+```{prf:proof}
+**induction & gaussian elimination**
 
 *Initial induction step* n = 1:
 If $X = \span{x_1}$, then $y_1, y_2 \in X = \span{x_1}$ are both scalars times $x_1$, which are linear dependent.
@@ -66,7 +56,8 @@ $\hat{y_j}$ has $k-1$ element.
 - If $k-1= m$, then $\hat{y_j}$ is linearly independent. However, since $\hat{y_j}$ depends on $y_1$, so that $y_1, \dots, y_n$ are linearly dependent.
 - If $k-1>m$, then $\hat{y_j}$ is linearly dependent. Then $y_1, \dots, y_n$ must be linearly dependent.
 
-
+```
+````
 
 *definition*
 If $X$ has basis of n elements, then **dimension** of $X$ is n, 
