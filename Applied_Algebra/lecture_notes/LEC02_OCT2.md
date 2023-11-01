@@ -80,6 +80,7 @@ How to constitute a basis?
 ## Special form of vector spaces (Inner product spaces)
 
 Vector spaces with an **inner product**,
+
 $$
 \langle \cdot, \cdot \rangle : x \times x \rightarrow \mathbb{F},
 $$

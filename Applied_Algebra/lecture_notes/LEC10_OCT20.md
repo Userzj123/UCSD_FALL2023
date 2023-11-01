@@ -11,7 +11,7 @@ Consider $A\in M_n(\C)$, vector space (dimension is $n^2$). Take $I, A, A^2, \do
 
 
 What about smaller degree polynomials?
-````{prf:definition} **Cauchy-Hamilton Theorem**
+````{prf:definition} **Cayley-Hamilton Theorem**
 Let $A \in M_n(\C)$ with $\sigma(A) = \{\series{\lambda}{n}\}$ and consider the  characteristic polynomial $P_A(\alpha) = \det(A-\alpha I)$. Then, 
 
 $$

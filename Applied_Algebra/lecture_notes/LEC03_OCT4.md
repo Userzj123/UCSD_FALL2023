@@ -1,10 +1,12 @@
 # Lec03
-*Proposition*:
+```{prf:proposition}
 Given $x_1, x_2, \dots, x_n$ linear independence in inner product space, then $\exists\, y_1, y_2, \dots, y_n$ orthogonal s.t.
 1. span $\{y_1, y_2, \dots, y_n\}$ = span $\{x_1, x_2, \dots, x_n\}$
 2. $y_k$ are unique up to const multiple for each $1\le k\le n$
+```
 
-*Proof*
+```{prf:proof}
+
 Induction on n
 1. Initial induction step n=1
 
@@ -59,16 +61,15 @@ Induction on n
     \end{bmatrix}.
     $$
 
+```
 
 
 
-*Consequence*
-$Z \subseteq X$ subspace, $X \Rightarrow$ vector space, then $X = Z \oplus Z^\perp$ where $V = V_1\oplus V_2$ means 
+subspace $Z \subseteq X$, $X \Rightarrow$ vector space, then $X = Z \oplus Z^\perp$ where $V = V_1\oplus V_2$ means 
 1. $V_1 \cap V_2 = \{0\}$ 
 2. $V= V_1 + V_2 = \{x+y |x\in V_1, y\in V_2\}$.
 
-e.g.
-
+```{prf:example}
 $Z$ has basis $x_1, x_2, \dots, x_n$, and extend it to $x_1, x_2, \dots, x_n, x_{n+1}, \dots, x_r$ where $\text{dim}(X)$ = r. Proposition says can have instead $\underbrace{z_1, z_2, \dots, z_n}_{\span{Z}}, \underbrace{z_{n+1}, \dots, z_r}_{\span{Z^\perp}}$ orthogonal and $\dim(X) = \dim(Z) + \dim(Z^\perp)$.
 
 In terms of matrices, extend the basis as $C = \begin{bmatrix} \underbrace{y_1, y_2, \dots, y_n}_{B}, \underbrace{y_{n+1}, \dots, y_r}_{\tilde{B}}\end{bmatrix}$. ($C^HC=$ diagonal matrix with positive diagonal entries.) Then, we could have,
@@ -76,18 +77,20 @@ In terms of matrices, extend the basis as $C = \begin{bmatrix} \underbrace{y_1, 
 $$
 A = C\begin{bmatrix} R \\ 0 \end{bmatrix} \Longleftrightarrow \begin{bmatrix} B & \tilde{B} \end{bmatrix} \begin{bmatrix} R \\ 0 \end{bmatrix} = BR
 $$
+```
+
 
 ## Linear transformation of vector spaces
-**Mapping**
+
+```{prf:definition} **Mapping**
 $T:X\rightarrow Y$ ($x \rightarrow T(x)$), where $X$ is the **domain** of the map and $Y$ is the **codomain**.
 
 - $\range(T) = T(x) = \{T(x) | x\in X\}$ is the **range** of $T$
-- For linear transformation (if the range is the vector spaces), $\rank(T) = \dim(\range(T))$
+- For linear transformation (if the range is the vector spaces), **rank** of $T$ is denoted as $\rank(T) = \dim(\range(T))$
 - $\null(T)$ is the **null space** of $T$ defined as kernel $\{x|T(x)=0\}$
+```
 
-
-### Linear Transformation
-
+```{prf:property}
 For $X, Y$ as vector spaces, linear transformations also satisfy
 - $T(\alpha x) = \alpha T(x), \forall x\in X, \alpha \in \mathbb{F}$,
 - $T(x+y) = T(x) + T(y), \forall x, y \in X$.
@@ -99,9 +102,9 @@ T(\alpha x + \beta y) = \alpha T(x) + \beta T(y), \forall \alpha, \beta \in \F, 
 $$
 
 Note $T(0) = 0$.
+```
 
-
-*Example*
+```{prf:example}
 1. $T:\C^n \rightarrow \C^m$ for fixed $A= M_{m, n}(\C)$,
 
     $$
@@ -125,7 +128,7 @@ Note $T(0) = 0$.
     $$
     C \rightarrow AC - CA^\top.
     $$
-
+```
 
 Linear transformation is completely determined by what it does to basis element. For example, given basis
 

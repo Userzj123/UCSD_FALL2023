@@ -11,19 +11,19 @@ execute:
   execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+# latex:
+#   latex_documents:
+#     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - stability.bib
+# bibtex_bibfiles:
+#   - stability.bib
 sphinx:
   config:
     nb_execution_mode: auto
     nb_merge_streams: true
     bibtex_reference_style: author_year
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     mathjax3_config:
       tex:
         macros:
@@ -50,6 +50,7 @@ sphinx:
           "LT": ["{_{#2}}[#1]_{#3}", 3]
           "am": "\\text{am}"
           "gm": "\\text{gm}"
+          "st": "\\text{ s.t. }"
   extra_extensions:
     - sphinx_proof
 parse:

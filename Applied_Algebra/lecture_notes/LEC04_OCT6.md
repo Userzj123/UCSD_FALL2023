@@ -1,15 +1,25 @@
 # Lec04
-$T: X\rightarrow Y$
 
-injection: T is 1-1 if T(x) = T(y)
+```{prf:definition}
+The function $T: X\rightarrow Y$ is **injective**, or **one-to-one**, if each element of the codomain $Y$ is mapped to by at most one element of the domain $X$, or equivalently, if distinct elements of the domain $X$ map to distinct elements in the codomain $Y$. An injective function is also called an **injection**. Notationally:
 
-serjection: T is onto if range(T) = T
+$$
+\forall x, x' \in X, f(x) = f(x') \Rightarrow x = x'.
+$$
+
+The function is $T: X\rightarrow Y$ **surjective**, or **onto**, if each element of the codomain $Y$ is mapped to by at least one element of the domain $X$. That is, the image and the codomain $Y$ of the function are equal. A surjective function is a **surjection**. Notationally:
+
+$$
+\forall y \in Y, \exists x \in X \st y = f(x)
+$$
+```
 
 
-## Rank-Nullity Theorem
+````{prf:definition} Rank-Nullity Theorem
 $\underbrace{\dim(\range( T ))}_{\rank(T)} + \dim(\null(T)) = \dim(X)$
 
-*proof*
+
+```{prf:proof}
 Let $y_1, y_2, \dots, y_m$ be a basis of $\range(T)$, so $\exists z_1, z_2, \dots, z_m \in X$ s.t. $T(z_j) = y_j,\, \forall 1\le j\le m$. Also let $x_1, \dots, x_n$ be a basis of $\null(T)$. Study $x_1, \dots,x_n, z_1, \dots, z_m$,
 
 
@@ -38,34 +48,41 @@ $$
     \Rightarrow \dim(X) &= n+m
 \end{aligned}
 $$
+```
 
-*Example*
+````
+
+
+```{prf:definition}
 For $T(x) = Ax$ for $x\in \C^n$, $A\in M_{m, n}(\C)$.
-
-*define*
-- $\range(A) = \range(T) = \{Ax|x\in \C^n\}$
-- $\null(A) = \null(T) = \{x\in \C^n|Ax=0\}$
 
 Let $e_1, \dots, e_n$ be the **standard orthogonal basis**: $(e_i)_j = \delta_{ij}$. Then, $T(e_i) = a_i$ is the i-th column of A. Thus, $\range(A) = \span{a_1, \dots, a_n}$, $\rank(A) = \dim(\range(A)) = \dim(\span{a_1, \dots, a_n})$. This is also known as the **column rank** of $A$.
 
 Then, **row rank** is the dimension of the span of the rows of $A$.
 
-*Proposition*
+```
+
+```{margin}
+- $\range(A) = \range(T) = \{Ax|x\in \C^n\}$
+- $\null(A) = \null(T) = \{x\in \C^n|Ax=0\}$
+```
+
+
+
+````{prf:proposition}
 The column rank equals to the row rank.
 
----
-*Proof*
+```{prf:proof}
 
-Suppose $A\in M_{m, n}$ has column rank $r$ and row rank $q$. Let $y_1, \dots, y_r$ be a basis of $\range(A)$. Let $B = [y_1, \dots, y_r]$, $A_{m, n} = B_{m, r} C_{r, n}$, so that A is the linear combination of B ($A_i = Bc_i$).
-
-$A^\top_{n, m} = C^\top_{n, r} B^\top_{r, m}$, in which columns of $A^\top$ are rows of $A$. 
+Suppose $A\in M_{m, n}$ has column rank $r$ and row rank $q$. Let $y_1, \dots, y_r$ be a basis of $\range(A)$. Let $B = [y_1, \dots, y_r]$, $A_{m, n} = B_{m, r} C_{r, n}$, so that A is the linear combination of B ($A_i = Bc_i$). Furthermore, $A^\top_{n, m} = C^\top_{n, r} B^\top_{r, m}$, in which columns of $A^\top$ are rows of $A$. 
 
 In this case, the dimension cannot be larger than the basis number(r) $q\le r$. Do same analysis on $A^\top: r\le q$. so $r=q$.
 
----
+```
+````
 
 
-Let $S, T: X\rightarrow Y$, $S, T$ linear transformation, $X, Y$ finite dim vector space.
+Let linear transformation $S, T: X\rightarrow Y$, in which $X, Y$ are finite dim vector space.
 
 Study:
 1. $S+T$ meaning $(S+T)(x) = S(x) + T(x)$
@@ -79,7 +96,7 @@ Also, $T:X\rightarrow Y$, $S:Y\rightarrow Z$, $T, S$ linear transformation. $S\c
 
 
 ## Representations
-
+````{prf:definition}
 $B_x = \{x_1, \dots, x_n\}$ a basis of $X$. Then, given $x\in X$,
 
 $$
@@ -90,13 +107,19 @@ Collect coefficients as $\begin{bmatrix}
     \alpha_1\\\vdots\\\alpha_n
 \end{bmatrix}\in \mathbb{F}^n$. This we call the **representation of x w.r.t. $B_x$**.
 
-*Notation*: $\begin{bmatrix}
+
+*Notation*: 
+
+$$
+\begin{bmatrix}
     \alpha_1\\\vdots\\\alpha_n
-\end{bmatrix} = [x]_{B_x}$.
+\end{bmatrix} = [x]_{B_x}.
+$$
 
-*note*
+```{note}
 If $[x]_{B_x} = [y]_{B_x} \Longleftrightarrow x=y$
-
+```
+````
 
 Now consider $z_1, \dots, z_n$. 
 
@@ -104,7 +127,8 @@ $$
 z_i = \sum_{j=1}^n a_{ij}x_j, \quad \forall 1\le i\le n
 $$
 
-*Proposition*
+```{prf:proposition}
 Define $A = (a_{ij}) \in M_{n}(\mathbb{F}) = \begin{bmatrix}
     \alpha_1\\\vdots\\\alpha_n
 \end{bmatrix}$, then $z_1, \dots, z_n \in X$ linear independent $\Longleftrightarrow$ $a_1, \dots, a_n \in \mathbb{F}^n$ linear independent.
+```
