@@ -42,6 +42,12 @@ parts:
       title: Applied Algebra Lec13
     - file: Applied_Algebra/lecture_notes/LEC14_OCT30.md
       title: Applied Algebra Lec14
+    - file: Applied_Algebra/lecture_notes/LEC15_NOV3.md
+      title: Applied Algebra Lec15
+    - file: Applied_Algebra/lecture_notes/LEC16_NOV06.md
+      title: Applied Algebra Lec16
+    - file: Applied_Algebra/lecture_notes/LEC17_NOV08.md
+      title: Applied Algebra Lec17
   - caption: Complex Analysis
     numbered: True
     chapters:
