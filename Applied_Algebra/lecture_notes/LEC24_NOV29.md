@@ -66,16 +66,25 @@ Finite dimension vector space $V (\C^n)$ over scalar field $\R $ or $\C$.
 *definition*
 1. A **quasi-seminorm** is a function $\nu: V\to \R$ satisfying $\nu(x+y)=\nu(x)+\nu(y), \nu(\alpha x) = \alpha \nu(x)$, for all $x, y \in V, \alpha\ge 0, \alpha \in \R$.
 2. A **seminorm** is a function $\nu: V\to \R$ satisfying $\nu(x+y)\le \nu(x)+\nu(y), \nu(\alpha x) = |\alpha| \nu(x)$, for all $x, y \in V, \alpha \in \C$.
-   Note: 
+   Note: $\nu(x)\ge 0, \, \forall x$ because,
    
    $$
-
+    \begin{align}
+    2 \nu &= \nu(x) + \nu(x)\\
+    & = \nu(x) + \nu(-x)\\
+    & = \nu(x-x)\\
+    & = \nu(0)\\
+    & = \nu(0 \cdot x)\\
+    & = 0
+    \end{align}
    $$
 
-
-[Missing]
-
-<!-- ??Hanbana -->
+3. A norm is a function $\nu:V\rightarrow \R$ satisfying 
+   $$
+   \nu(x+y) \le \nu(x)+\nu(y)\\
+   \nu(\alpha x) = |\alpha|\nu(x)\\
+   \nu(x) = 0 \Longleftrightarrow x = 0
+   $$
 
 *example*
 Over $\C^n$, we commonly use 
@@ -85,13 +94,83 @@ $$
     \nu(x) = \|x\|_2 &= \sqrt{x^Hx}\\
     \|x\|_1 & = \sum_{i=1}^n |x_i|\\
     \|x\|_p & = \left(\sum_{i=1}^n |x_i|^p\right)^\frac{1}{p}, \quad p\in \mathbb{N}\setminus\{0\}\\
-    \|x\|_\infty & = 
+    \|x\|_\infty & = \max_{1\le i\le n} |x_i|
 \end{align}
 $$
 
-[Missing]
+for finite dimension vector space $V$, fix basis $B$, we can get
 
-*proposition* Let $V$ finite dimension vector space with basis $B$ and norm $\|\cdot\|_2$
+$$
+\|x\|_p = \|[x]_B\|_p,\\
+\|x\|_\infty = \|[x]_B\|_\infty.
+$$
 
-[Missing]
+For inner product space $V$, we can get $\|x\| = \sqrt{\langle x, x\rangle}$ and have Cauchy-Schmwarz $|\langle x, y\rangle| \le \|x\|\|y\|$. For orthonormal basis $B$,
 
+$$
+|\langle x, y \rangle| = [y]_B^H [x]_B \le \|x\|_2\|y\|_2.
+$$
+
+---
+Can use norms to measure distances. 
+
+A **metric** $\rho: V\times V \rightarrow \R$ satisfies $\forall x, y, z\in V$, 
+
+$$
+\rho(x, y) \ge 0\\
+\rho(x, y) = 0 \Longleftrightarrow x=y,\\
+\rho(x, y) = \rho(y, x),\\
+\rho(x, z) \le \rho(x, y) + \rho(y, z)
+$$
+
+
+For norm $\|\cdot\|$ over $V$, then $\rho(x, y) = \|x-y\|$ is a metric.
+
+
+*proposition* Let $V$ finite dimension vector space with basis $B$ and norm $\|\cdot\|_2$. Then any norm $\|\cdot\| : V\rightarrow \R$ is a continuous function with respect to the metric arising from $\|\cdot\|_2$. 
+
+$\forall x \in V$, given $\epsilon \gt 0$, $\exist \delta \gt 0 \st \|x-y\|_2 \lt \delta \Rightarrow |\|x\|-\|y\|| \lt \epsilon, \, \forall y\in V$.
+
+*proof*
+
+
+$$
+\begin{align}
+    \|x\| &= \|x - y + y\| \le \| x-y\| + \|y\|\\
+    \begin{cases}
+    \|x\|-\|y\| \le \|x - y\|\\
+    \|y\|-\|x\| \le \|y - x\|
+    \end{cases} & \Rightarrow|\|x\|-\|y\|| \le \|x-y\|
+\end{align}
+$$
+
+Now let $\alpha = [x-y]_B$, then
+
+$$
+\begin{align}
+    |\|x\| -\|y\|| &\le \|x-y\|\\
+    & = \left\| \sum_{i=1}^n \alpha_i \underbrace{x_i}_{\text{basis}}\right\|\\
+    & \le \sum_{i=1}^n |\alpha_i| \|x_i\|\\
+     & \le \|\alpha\|_2 \|\beta\|_2\\
+     & = \|\beta\|_2 \|x-y\|_2
+\end{align}
+$$
+
+where $\beta = \begin{bmatrix}\|x_1\| \\ \vdots \\ \|x_n\|\end{bmatrix} $.
+
+Given $\epsilon \gt 0, \exists \delta = \frac{\epsilon}{2\|\beta\|_2} \st$, 
+
+$$
+\|x-y\|_2 \lt \underbrace{\frac{\epsilon}{2\|\beta\|_2}}_{\delta} \Rightarrow |\|x\|-\|y\|| \le \frac{\epsilon}{2}\lt \epsilon
+$$
+
+
+
+*proposition*
+Let $V$ finite dimension vector space with basis $B$ and norm $\|\cdot \|_2$. Then any norm $\|\cdot\|$ has real numbers $c_1, c_2 \gt 0 \st$
+
+$$
+c_1\|x\|_2 \le \|x\| \le c_2 \|x\|_2,
+$$
+
+for all $x\in V$.
