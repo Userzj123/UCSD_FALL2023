@@ -34,7 +34,7 @@ $$
 in which $CBC^{-1}$ is similar to $B$ so $\sigma(B) = \sigma(CBC^{-1})$. Thus, eigenvalues of $A$ over $S$ is well-defined.
 
 *Summary*
-$\range(X)$, where $X$ has linearly independent columns, is **invariant** iff $\exists B$ s.t. 
+$\range(X)$, where $X$ has linearly independent columns, is **invariant** i.f.f. $\exists B$ s.t. 
 
 $$
 AX = XB, \;\& \; \sigma(B) \subseteq \sigma(A).

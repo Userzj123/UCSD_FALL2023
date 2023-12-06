@@ -100,9 +100,10 @@ $\|\cdot \|$ equivalent to $\|\cdot \|'\Rightarrow \|\cdot \|^\prime $ equivalen
 For $x\in \C^n$, we define $|x|\in \C^n$ with entries $(|x|)_i = |x_i|, \, \forall 1 \le i \le n$.
 
 A norm is called **absolute** if $\||x|\| = \|x\|$.
-A norm is called **monotone** if $|x_i|\le |y_i|, \forall $
+A norm is called **monotone** if $|x_i|\le |y_i|, \forall 1\le i \le n \Rightarrow \|x\|\le \|y\|$.
 
-[Missing]
+Actually, a norm is absolute i.f.f. it is monotone.
+
 <!-- all p-norm is absolute -->
 
 $M_n(\C) \Longleftrightarrow \C^{n^2}$ so any norm of $\C^{n^2}$ is a norm of $M_n(\C)$.
@@ -111,13 +112,20 @@ $M_n(\C) \Longleftrightarrow \C^{n^2}$ so any norm of $\C^{n^2}$ is a norm of $M
 Using $\|\cdot\|_2$ of $\C^{n^2}$, we can write the **Frobeniuous norm**
 
 $$
-\|A\|_F = \left(\right)
+\|A\|_F = \left( \sum_{j=1}^n \sum_{i = 1}^n |a_{ij}|^2 \right)^{\frac{1}{2}}, \text{ for } A \in M_n(\C).
 $$
 
-[Missing]
+We prefer our matrix norms to satisfy 
+
+$$
+\|AB\| \le \|A\|\|B\|, \forall A, B \in M_n(\C).
+$$
+
+A norm with this property is called a **consistant** matrix norm.
+
 
 *example*
-using $\|\cdot\|_\infty$ for $\C^{n^2}$, we cee this is not consistent, for 
+using $\|\cdot\|_\infty$ for $\C^{n^2}$, we see this is not consistent, for 
 
 $$
 A = B = ones
@@ -126,7 +134,7 @@ $$
 
 ---
 
-Given a vector norm $\|\cdot\|$, a matrix norm $\|\cdot\|$ is called compatible with the vector norm $\|\cdot\|$ if 
+Given a vector norm $\|\cdot\|$, a matrix norm $\|\cdot\|$ is called **compatible** with the vector norm $\|\cdot\|$ if 
 
 $$
 \|Ax\|\le \|A\|\|x\|, \, \forall A \in M_n(\C), x\in \C^n.
@@ -160,26 +168,46 @@ $$
 
 We have the following simplication:
 
-1. $\displaystyle\|A\|_\infty = \max_{1\le i\le n}$
+$$
+\begin{align}
+    \|A\|_\infty &= \max_{1\le i \le n} \sum_{j=1}^n |a_{ij}|\\
+    \|A\|_2 &= \max_{1\le j\le n} \sum_{i=1}^n |a_{ij}|\\
+    \|A\|_2 & = \left( \rho(A^HA) \right)^{\frac{1}{2}},
+\end{align}
+$$
 
+where $\displaystyle \rho(B) = \max_{\lambda \in \sigma(B)} |\lambda|$, called the **spectral radius of $B$.
 
-[Missing]
 
 *relation*
 1. A matrix norm that is induced by the a vector norm, is consistent,
    
    $$
-   \|AB\| = \max
+   \|AB\| = \max_{x\neq 0} \frac{\|ABx\|}{\|x\|} \le \max_{x\neq 0} \frac{\|A\|\|Bx\|}{\|x\|} \le \max_{x\neq 0} \frac{\|A\|\|B\|\|x\|}{\|x\|} = \|A\|\|B\|
    $$
 
-[Missing]
+1. Any consistent matrix norm is compatible with some vector norm: consider vector norm $\|x\| = \|xy^H\|$ for fixed $y\in \C^n, y \neq 0$. Then,
 
-1. Not all compatible matrix norm are induced by some vector norm, e.g. Frobenius norm
+    $$
+    \|Ax\| = \|Axy^H\| \le \|A\| \|xy^H\| = \|A\|\|x\|
+    $$
+
+2. Not all compatible matrix norm are induced by some vector norm, e.g. Frobenius norm
 
     $$
     \|I\|_F = n^{\frac{1}{2}}
     $$
 
     However, 
+
+    $$
+    \|I\| = \max_{x\neq 0} \frac{\|Ix \|}{\|x\|} = 1,
+    $$
+
+    for induced norms. In fact, Frobenius norm is consistent /compatible with 2-norm,
+
+    $$
+    \|Ax\|_2 \le \|A\|_F \|x\|_2.
+    $$
 
 <!-- Frobenius norm is consistent /compatible with 2-norm -->

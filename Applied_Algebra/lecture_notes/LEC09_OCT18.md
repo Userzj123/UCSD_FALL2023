@@ -77,7 +77,7 @@ Consider other $X^{-1}A X = B$, we want:
 
 
 ```{prf:definition}
-We called $A\in M_n(\C)$ a **block upper triangular** matrix iff 
+We called $A\in M_n(\C)$ a **block upper triangular** matrix i.f.f. 
 
 $$
 A = \begin{bmatrix}

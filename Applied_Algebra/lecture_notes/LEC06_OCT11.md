@@ -40,7 +40,7 @@ $$
 In this, $\lambda$ is called the **eigenvalue** and $x$ is called the **eigenvectors**.
 ```
 
-Thus, $\lambda $ is an eigenvalue iff $\null(A-\lambda I) \neq \{0\}$ ($ \Rightarrow$ iff $A=\lambda I$ singular).
+Thus, $\lambda $ is an eigenvalue i.f.f. $\null(A-\lambda I) \neq \{0\}$ ($ \Rightarrow$ i.f.f. $A=\lambda I$ singular).
 $x\in \null(A-\lambda I)\setminus \{0\}$ is an eigenvector.
 
 Note: $T(x)= \lambda x \Longleftrightarrow _B[T]_B[x]_B = \lambda [x]_B$ for any basis $B$ of $X$.

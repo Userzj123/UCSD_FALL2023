@@ -1,7 +1,7 @@
 # Lec 19 Nov 15
 
 *porposition*
-For $A\in M_n(\C)$, then $F(A)\subseteq \C$ is convex. Meaning that given $\alpha, \beta \in F(A)$, then 
+For $A\in M_n(\C)$, then $F(A)\subseteq \C$ is **convex**. Meaning that given $\alpha, \beta \in F(A)$, then 
 
 $$
 \theta \alpha + (1-\theta) \beta \in F(A), \forall \theta \in (0, 1)
@@ -54,7 +54,7 @@ Because it could be complex value then the line segment equation can no longer b
 
 We will modify this function $f$:
 write $B = X+\ii Y$ where $X, Y$ are Hermitian, then 
-
+ 
 $$
 \begin{aligned}
     W(t)^HB W(t) & = \underbrace{W(t)^HX W(t)}_{\text{real}} + \ii \underbrace{W(t)^HY W(t)}_{\text{real} \& = 0}

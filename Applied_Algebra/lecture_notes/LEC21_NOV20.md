@@ -128,15 +128,15 @@ since $A = C\mp zz^H$. Same as previous proposition.
 
 
 *definition*
-Hermitian matrix $A\in M_n(\C)$ is called **positive definite** iff $x^*Ax \gt 0 \forall x\in \C^n \setminus \{0\}$. And it is **positive semidefinite** iff $x^HAx \ge 0 \forall x\in \C^n$.
+Hermitian matrix $A\in M_n(\C)$ is called **positive definite** i.f.f. $x^*Ax \gt 0 \forall x\in \C^n \setminus \{0\}$. And it is **positive semidefinite** i.f.f. $x^HAx \ge 0 \forall x\in \C^n$.
 
 It is possible to define for $\F = \R$ and $A\in M_n(\R)$, $x^\top Ax \gt 0, \forall x\in \R^n\setminus\{0\}$ as beging positive definite. Here $A$ positive definite does not necessarily imply $A$ symmetric. Mostly in this setting, work with symmetric positive definite (SPD).
 
 *proposition*
 Let $A\in M_n(\C)$ be Hermitian, then
 
-1. $A$ positive semidefinite iff $\lambda \ge 0, \forall \lambda \in \sigma(A)$
-1. $A$ positive definite iff $\lambda \gt 0, \forall \lambda \in \sigma(A)$
+1. $A$ positive semidefinite i.f.f. $\lambda \ge 0, \forall \lambda \in \sigma(A)$
+1. $A$ positive definite i.f.f. $\lambda \gt 0, \forall \lambda \in \sigma(A)$
 
 *proof*
 1. (forward) $\lambda \in \sigma(A)$ means $(\lambda, x)$ is eigenpair of $A$ for some $x\in \C^n\setminus\{0\}$, then 

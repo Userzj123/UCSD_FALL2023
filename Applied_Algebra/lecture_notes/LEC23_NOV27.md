@@ -141,7 +141,9 @@ where $B_{ii} \in M_{m_i}(\C) \st U = \hat{U}B, V = \hat{V}C$.
    |A| = (A^HA)^{\frac{1}{2}}
    $$
 
-   the **modules** of $A$.
+   the **modules** of $A$[^reading_svd]. 
+
+[^reading_svd]: [link](https://math.stackexchange.com/questions/1927845/is-u-v-in-the-svd-of-a-symmetric-positive-semidefinite-matrix).
 
 
 Courant-Fisher says $p = \min\{m,n\}$ and $\sigma_1 \ge \dots \ge \sigma_p$ ordered singular values for $1\le i\le p$. 

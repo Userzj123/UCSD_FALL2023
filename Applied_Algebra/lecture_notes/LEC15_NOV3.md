@@ -9,7 +9,7 @@ $$
 Also read as $T_{11}Z - ZT_{22} = -T_{12}$, or alternatively $T_{11}Y - YT_{22} = T_{12}$.
 
 *proposition*
-For $A\in M_m(\C), B\in M_n(\C)$, $\lambda$ is an eigenvalue of $S:M_{m,n}(\C) \rightarrow M_{m,n}(\C) ( X \rightarrow AX-XB)$ iff $\lambda = \alpha - \beta$, where $\alpha \in \sigma(A), \beta \in \sigma(B)$.
+For $A\in M_m(\C), B\in M_n(\C)$, $\lambda$ is an eigenvalue of $S:M_{m,n}(\C) \rightarrow M_{m,n}(\C) ( X \rightarrow AX-XB)$ i.f.f. $\lambda = \alpha - \beta$, where $\alpha \in \sigma(A), \beta \in \sigma(B)$.
 
 
 ---

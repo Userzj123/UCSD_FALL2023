@@ -68,7 +68,7 @@ $$
 
 ### 2.4.4 Sylvester's theorem on linear matrix equations
 ```{prf:definition} Invariant
-For $A \in M_n(\C)$ and a subspae $S\subseteq \C^n$, we call $S$ **invariant** iff 
+For $A \in M_n(\C)$ and a subspae $S\subseteq \C^n$, we call $S$ **invariant** i.f.f. 
 
 $$
 x\in S \Rightarrow Ax \in S.

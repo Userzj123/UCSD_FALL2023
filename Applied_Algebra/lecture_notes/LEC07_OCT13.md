@@ -25,10 +25,10 @@ If the matrix is orthogonal, then its transpose and inverse are equal. [^orthogo
 
 [^orthogonal_matrix]: [orthogonal matrix](https://byjus.com/maths/orthogonal-matrix/#:~:text=If%20the%20matrix%20is%20orthogonal,transpose%20and%20inverse%20are%20equal.)
 
-Also, $x\neq 0$ is an eigenvector iff $A \cdot\span{x}\subseteq \span{x}$ (follow from $Ax=\lambda x$).
+Also, $x\neq 0$ is an eigenvector i.f.f. $A \cdot\span{x}\subseteq \span{x}$ (follow from $Ax=\lambda x$).
 
 ```{prf:proposition}
-y is a left eigenvector iff $y\neq0$ and $A \cdot\span{y}^\perp\subseteq \span{y}^\perp$.
+y is a left eigenvector i.f.f. $y\neq0$ and $A \cdot\span{y}^\perp\subseteq \span{y}^\perp$.
 ```
 
 ```{margin}
@@ -75,7 +75,7 @@ Thus, y is a left eigenvector.
 
 
 ## The characteristic polynomial and algebraic multiplicity
-Construct a polynomial $P_A(\alpha) = \det(A-\alpha I)$, which equal to 0 iff $\alpha$ is eigenvalue of $A$. So eigenvalues are roots of $P_A$.
+Construct a polynomial $P_A(\alpha) = \det(A-\alpha I)$, which equal to 0 i.f.f. $\alpha$ is eigenvalue of $A$. So eigenvalues are roots of $P_A$.
 
 Fundamental theorem of algebra says that 
 

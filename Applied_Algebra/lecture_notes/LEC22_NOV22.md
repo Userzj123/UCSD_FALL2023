@@ -11,7 +11,7 @@ Let $A \in M_{m, n}(\C)$, then
 1. $\rank(A^HA) = \rank(A)$
 1. $\rank(A) = \#\{\lambda \gt 0 | \underbrace{\lambda \in \sigma(A^HA)}_{\text{multiset}}\}$
 
-Can apply to $A^H$ to get properties on $AA^Hs$.
+Can apply to $A^H$ to get properties on $AA^H$.
 
 *proposition*
 Let $A \in M_{m,n}(\C)$, then

@@ -76,7 +76,7 @@ $$
 So, 
 1. can talk about Jordan blocks of $A$.
 2. $A, B\in M_n(\C)$ are similar $\Longleftrightarrow \sigma(A) = \sigma(B)$ and for each $\lambda \in \sigma(A)$, both $A, B$ have the same number and order of Jordan blocks associated to $\lambda$.
-3. $A$ is nondefective iff all its Jordan block in canonical form have order 1.
+3. $A$ is nondefective i.f.f. all its Jordan block in canonical form have order 1.
 
 *Drawback*
 Jordan canonical form can be discontinuous in $A$. -> if perturb A, the Jordan canonical form will be very different.
@@ -118,7 +118,7 @@ A + A^H = S+\ii T + S - \ii T = 2S\\
 A - A^H = \ii2T
 $$
 
-so $A = S+\ii T$ and $S, T$ is Hermitian matrix iff $S = \frac{1}{2}\left(A+ A^H\right)$ and $T = \frac{1}{2}\left(A- A^H\right)$.
+so $A = S+\ii T$ and $S, T$ is Hermitian matrix i.f.f. $S = \frac{1}{2}\left(A+ A^H\right)$ and $T = \frac{1}{2}\left(A- A^H\right)$.
 
 
 *definition*
@@ -148,4 +148,4 @@ For general matrix $A\in M_n(\C)$,  $F(A)\subseteq \C$ is a compact set.
 Let $f:\C^n\rightarrow \C ( x \rightarrow x^HAx)$, then $f$ continuous. Also $S = \{x|x^Hx = 1\}$ is compact. And $f(S) = F(A)$. Since $f$ is continuous and compact then $F$ is compact.
 
 *proposition*
-For general matrix $A\in M_n(\C)$, $F(A) \subseteq\C$ is convex.
+For general matrix $A\in M_n(\C)$, $F(A) \subseteq\C$ is **convex**.

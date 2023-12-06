@@ -48,6 +48,24 @@ parts:
       title: Applied Algebra Lec16
     - file: Applied_Algebra/lecture_notes/LEC17_NOV08.md
       title: Applied Algebra Lec17
+    - file: Applied_Algebra/lecture_notes/LEC18_NOV13.md
+      title: Applied Algebra Lec18
+    - file: Applied_Algebra/lecture_notes/LEC19_NOV15.md
+      title: Applied Algebra Lec19
+    - file: Applied_Algebra/lecture_notes/LEC20_NOV17.md
+      title: Applied Algebra Lec20
+    - file: Applied_Algebra/lecture_notes/LEC21_NOV20.md
+      title: Applied Algebra Lec21
+    - file: Applied_Algebra/lecture_notes/LEC22_NOV22.md
+      title: Applied Algebra Lec22
+    - file: Applied_Algebra/lecture_notes/LEC23_NOV27.md
+      title: Applied Algebra Lec23
+    - file: Applied_Algebra/lecture_notes/LEC24_NOV29.md
+      title: Applied Algebra Lec24
+    - file: Applied_Algebra/lecture_notes/LEC25_DEC01.md
+      title: Applied Algebra Lec25
+    - file: Applied_Algebra/lecture_notes/LEC26_DEC4.md
+      title: Applied Algebra Lec26
   - caption: Complex Analysis
     numbered: True
     chapters:
