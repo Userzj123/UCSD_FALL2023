@@ -29,11 +29,19 @@ $$
 *proposition*
 Dual norm of $1$-norm is the $\infty$-norm.
 
+*proof*
+Fixed $x$, find $\|y\|_1 = 1 \st |y^Hx| = \|x\|_\infty$. 
+
+If $\|x\|_\infty = |x_k|$, the equality is satisfied with $y = e_k$.
+
+Note:
+1. Dual of $\|\cdot\|_A$ is $\|\cdot\|_{A^{-1}}$ for $A$ is positive definite.
+2. Dual of $\|\cdot\|_p$ is $\|\cdot\|_q$ for $\frac{1}{p}+\frac{1}{q} = 1$.
 
 
-[Missing]
 
-We can also define a **linear functional** $f$ on a subspace $V \subseteq \C^n$ of dim m as linear transformation, $f:V\to \C^n$.
+
+We can also define a **linear functional** $f$ on a subspace $V \subseteq \C^n$ of dim $m$ as linear transformation, $f:V\to \C^n$.
 
 We can find $y\in \C^n$ s.t.,
 
@@ -45,17 +53,18 @@ Since, let $B_1'$ be a basis of $V$, $B_1$ basis of $\C^n$ extends $B_1^\prime$.
 
 $$
 \begin{align}
-    & \because [x]_{B_1} & = P[x]_{B_1} = P{_{B_1}}[I_n]_{B_2} [x]_{B_2}\\
-    & \therefore f(x) & = 
+    & \because [x]_{B_1}  = \underbrace{P}_{\begin{bmatrix}I_m & 0\end{bmatrix}}[x]_{B_1} = P{_{B_1}}[I_n]_{B_2} [x]_{B_2}\\
+    & \therefore f(x)  = [f(x)]_{\{1\}}  = {_{\{1\}}} [f]_{B_1^\prime} [x]_{B_1^\prime} = {_{\{1\}}}[f]_{B_1^\prime} P{_{B_1}}[I_n]_{B_2} [x]_{B_2} = y^Hx
 \end{align}
 $$
 
-[Missing]
+We can extend linear functional $f:V\to \C$ to $F:\C^n \to \C$, where $F(x)=f(x), \forall x\in V$ by using $F(x) = y^Hx, \, \forall x\in \C^n$. But there are other extensions as well: any extension $F$ will satisfy $F(x) = (y+z)^Hx$, where $z\in V^\perp$. But we can pick the best extension, which is non-increase in the norm of extension.
+
 
 
 ### Hahn-Banach Theorem
 
-Let $\|\cdot\|$ be a seminorm of $\C^n$, $V\subseteq \C^n$ subspace, $f:V\to \C$ linear functional satisfying $f(x)\le \|x\|, \forall x \in V$.
+Let $\|\cdot\|$ be a seminorm of $\C^n$, subspace $V\subseteq \C^n$, $f:V\to \C$ linear functional satisfying $f(x)\le \|x\|, \forall x \in V$.
 
 Then exists a linear functional $F:\C^n\to \C$ s.t.,
 
@@ -87,7 +96,52 @@ $$
 \end{align}
 $$
 
-[???Missing]
+
+Fix $x\neq 0 \Rightarrow$ define linear functional $f:\span{x} \to \C, \alpha x \to \alpha \nu(x)$. Then, 
+
+$$
+|f(\alpha x)| = |\alpha \nu(x)| = ||\alpha|\nu (x)| = |\nu(\alpha x)| = \nu(\alpha x).
+$$
+
+And so $\exists$ linear functional $F:\C^n \to \C \st$, 
+
+$$
+F(\alpha x) = f(\alpha x), \forall \alpha \in \C,\\
+|F(w)|\le \nu(w), \forall w\in \C^n.
+$$
+
+Now exists $z\in \C^n \st$
+
+$$
+F(w) = z^Hw, \forall w\in \C^n.
+$$
+
+
+So
+
+$$
+\nu^*(z) = \max_{w\neq 0} \frac{|z^Hw|}{\nu(w)} = \max_{w\neq 0} \frac{|F(w)|}{\nu(w)} = 1.
+$$
+
+Also
+
+$$
+z^Hx = F(x) = f(x) = \nu(x)
+$$
+
+so
+
+$$
+\nu(x) = z^Hx = |z^Hx|.
+$$
+
+so
+
+$$
+\nu^{**}(x) = \max_{y\neq 0} \frac{|y^Hx|}{\nu(y)} \ge \frac{z^Hx}{\nu^*(z)} = \nu(x).
+$$
+
+
 
 so $\nu^{**}(x) = \nu(x), \forall x \in \C^n$.
 

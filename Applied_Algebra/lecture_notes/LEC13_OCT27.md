@@ -1,5 +1,6 @@
 # Lecture 13
-*proof* Real Schur Decomposition
+```{prf:proof} **Real Schur Decomposition**
+
 We show one step of deflation, for an arbitrary eigenvalue. Let $\lambda \in \sigma(A)$, 
 - If $\lambda$ real, then $\exists x \in \R^n$ eigenvector for $\lambda$, s.t.
 
@@ -32,14 +33,18 @@ in which $T_{11}\sim\begin{bmatrix} \alpha & \beta \\ -\beta & \alpha \end{bmatr
 *Consequence*
 If $A$ has $n$ real eigenvalues, then $\exists Q$ orthogonal s.t. $Q^TAQ = T$ upper triangular.
 
+```
+
 
 ## Unitarily Diagonalizable
-*definition*
+```{prf:definition}
 $A\in M_n(\C)$ is called **Hermitian** if 
 
 $$
 A = A^H.
 $$
+```
+
 
 With Schur decomposition, get
 
@@ -54,10 +59,15 @@ $$
 \end{aligned}
 $$
 
-Thus, $A$ is diagonalizable and **unitarily diagonalizable**. Furthermore, $\Lambda \in M_n(\R)$ eigenvalue of $A$ is real.
+Thus, $A$ is diagonalizable and **unitarily diagonalizable**. Furthermore, eigenvalue of $A$ is real,
 
-*Notation*
+$$
+\Lambda \in M_n(\R).
+$$
+
+```{admonition} Notation
 $A = Q\Lambda Q^H$ is called the **spectral** or **eigen decomposition** of $A$.
+```
 
 We can also write 
 
@@ -65,11 +75,14 @@ $$
 A = \sum_{j=1}^n \lambda_j q_j q_j^H.
 $$
 
+```{prf:proposition}
 If $A \in M_n(\R)$ and Hermitian, then $A$ is called **symmetric**: $A = A^T$. Then it turns out that $\exists Q\in M_n(\R)$ orthogonal s.t.,
 
 $$
 Q^TAQ = \Lambda.
 $$
+
+```
 
 What other matrices are unitarily diagonalizable?
 If $A$ is unitarily diagonalizable then 
@@ -89,12 +102,13 @@ $$
 \end{aligned}
 $$
 
-*definition*
+```{prf:definition}
 We call $A\in M_n(\C)$ **normal** if 
 
 $$
 AA^H = A^HA.
 $$
+```
 
 If $A$ normal, then Schur decomposition gives $A = QTQ^H $. Then, 
 
@@ -106,10 +120,10 @@ $$
 \end{aligned}
 $$
 
-*lemma*
+````{prf:lemma}
 If $T\in M_n(\C)$ is upper triangular and normal, then $T$ diagonal.
 
-*proof*
+```{prf:proof}
 Induction on row $i$ being that of a diagonal matrix.
 
 Initial induciton: step i = 1
@@ -163,13 +177,20 @@ $$
 \end{aligned}
 $$
 
-*proposition*
+
+```
+````
+
+
+
+```{prf:proposition}
 $A\in M_n(\C)$ normal $\Longleftrightarrow$ $A$ unitarily diagonalizable.
+```
 
-
-*example* 
+```{prf:example}
 - Hermitian matrices: $A = A^H$,
 - Skew hermitian matrices : $A = -A^H$,
 - Unitary matrices: $A^H = A^{-1}$,
 
 and others.
+```

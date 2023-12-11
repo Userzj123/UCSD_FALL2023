@@ -1,10 +1,10 @@
 # LEC 11
 ## Invariant subspace
 
-
+````{prf:proposition}
 If **invariant subspace** $S\subseteq \C^n$ has basis $X = \begin{bmatrix} x_1 & \dots & x_k \end{bmatrix} \in M_{n, k}(\C)$, then $AX=XB$. Note $S = \range(X)$. According to LEC10, $\sigma(B)\le \sigma(A)$. Then, for each eigenvalue $\lambda \in \sigma(B)$, there exists $v\in \range(X)$ that is an eigenvector of $A$ corresponding to $\lambda$.
 
-*proof*
+```{prf:proof}
 If $\lambda$ is eigenvalue of $B$, then there exists an eigenvector $w$ of $B$ corresponding to $\lambda$. Then we could have
 
 $$
@@ -17,7 +17,8 @@ $$
 $$
 
 Thus, $(\lambda, v)$ is an eigen-pair of A.
-
+```
+````
 
 Suppose $\series{y}{k}$ as another basis of S, 
 
@@ -31,20 +32,24 @@ $$
 AX = XB \Longleftrightarrow AYC = YCB \Longleftrightarrow AY = YCBC^{-1},
 $$
 
-in which $CBC^{-1}$ is similar to $B$ so $\sigma(B) = \sigma(CBC^{-1})$. Thus, eigenvalues of $A$ over $S$ is well-defined.
+in which $CBC^{-1}$ is similar to $B$ so $\sigma(B) = \sigma(CBC^{-1})$. Thus, **eigenvalues of $A$ over $S$ is well-defined**.
 
-*Summary*
+```{admonition} Summary
 $\range(X)$, where $X$ has linearly independent columns, is **invariant** i.f.f. $\exists B$ s.t. 
 
 $$
-AX = XB, \;\& \; \sigma(B) \subseteq \sigma(A).
+AX = XB \;\& \; \sigma(B) \subseteq \sigma(A).
 $$
 
-*proposition*
-Let $\{\series{\lambda}{k}\}\subseteq \sigma(A)$ as multisets, then $\exists$ an invariant subspace such that $A$ over it has eigenvalues $\series{\lambda}{k}$.
+```
 
 
-*proof*
+
+````{prf:proposition}
+Let $\{\series{\lambda}{k}\}\subseteq \sigma(A)$ as multisets, then $\exists$ an **invariant subspace** such that $A$ over it has eigenvalues $\series{\lambda}{k}$.
+
+
+```{prf:proof}
 According to Schur Decomposition, we have
 
 $$
@@ -61,17 +66,18 @@ $$
 $$
 
 so $AQ_1 = Q_1 T_{11}$. Thus, $\range(Q_1)$ invariant and eigenvalues of $A$ over $\range(Q_1)$ are $\sigma(A_{11}) = \{\series{\lambda}{k}\}$.
-
+```
+````
 
 One consequence of this is:
 
-*proposition*
-Given $A\in M_n(\C)$, and multiset $w = \{\series{\lambda}{t}\}$ satisfying $w\subseteq \sigma(A)$ and $w \cap (\sigma(A)\setminus w) = \phi$. Then exists a unique invariant subspace over which $A$ has eigenvalues of $w$.
+````{prf:proposition}
+Given $A\in M_n(\C)$, and multiset $w = \{\series{\lambda}{t}\}$ satisfying $w\subseteq \sigma(A)$ and $w \cap (\sigma(A)\setminus w) = \emptyset$. Then exists a *unique invariant subspace* over which $A$ has eigenvalues of $w$.
 
 
 
-*proof*
-suppose basis $\series{x}{k}$ for invariant subspace and if $X = \begin{bmatrix} x_1 & \dots x_k \end{bmatrix}$, then $AX = XB$ and $\sigma(B) \subseteq \sigma(A)$.
+```{prf:proof}
+Suppose basis $\series{x}{k}$ for invariant subspace and if $X = \begin{bmatrix} x_1 & \dots x_k \end{bmatrix}$, then $AX = XB$ and $\sigma(B) \subseteq \sigma(A)$.
 
 Consider two invariant subspaces $\range(X), \range(Y)$, where $X, Y$ have linearly independent columns. Note $\range(X)\cap\range(Y)$ is also an invariant subspace.
 
@@ -84,17 +90,20 @@ $$
 Thus, the spectrum of $B$ satisfies,
 
 $$
-\sigma(B) = \underbrace{\sigma(B_{11}) \cup \sigma(B_{22}) \cup \sigma(B_{33})}_{\{\series{\lambda}{k}\}}.
+\sigma(B) = \sigma(B_{11}) \cup \sigma(B_{22}) \cup \sigma(B_{33}).
 $$
+
+in which $\sigma(B_{11}) \cup \sigma(B_{22}) = \sigma(B_{22}) \cup \sigma(B_{33}) = \{\series{\lambda}{k}\}$. And there is no extra dimension, then $\sigma(B_{22}) = \{\series{\lambda}{k}\}$.
 
 Thus, 
 
 $$
 \range(X) \cap \range(Y) = \range(X) = \range(Y)
 $$
+```
+````
 
-
-*example*
+```{prf:example}
 $A$ has eigenvalues 
 
 $$
@@ -102,7 +111,7 @@ $$
 $$
 
 Then, $1, 1, 2$ has unique invariant subspace while $2,3,4,4$ perhaps not.
-
+```
 
 
 Changing to unitary basis. For $S$ an invariant subspace, let $\series{u}{k}$ be basis, the first k columns of unitary matrix $U$, 

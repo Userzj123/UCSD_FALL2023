@@ -1,22 +1,34 @@
 # Lec12
-*definition*
+```{prf:definition}
 
-- $(B, X)$ is called an **eigenpair** or **right eigenpair** of $A$ if $X$ has linear independent columns and $ AX = XB$.
+- $(B, X)$ is called an **eigenpair** or **right eigenpair** of $A$ if $X$ has linear independent columns and 
+
+    $$
+    AX = XB.
+    $$
+
     It is of order $k$ if $X$ has $k$ columns.
     Also the $X$ is called an **eigenbasis** of $A$ and $B$ is called an **eigenblock** of $A$.
     Also we call $(B, X)$ **orthonormal** if $X$ has orthonormal columns.
     An invariant subspace of $A$ is also called an **eigenspace** of $A$.
     Furthermore, the eigenspace is called **simple** if
+
     $$
     \sigma(B) \cap (\sigma(A)\setminus\sigma(B)) = \phi
     $$
 
-- $(B, Y)$ is called an **left eigenpair** of $A$ if $Y$ has linear independent columns and $ Y^HA  = BY^H$ or $A^HY = YB^H$.
+- $(B, Y)$ is called an **left eigenpair** of $A$ if $Y$ has linear independent columns and 
+    
+    $$
+    Y^HA  = BY^H \text{ or } A^HY = YB^H.
+    $$
+
     It is of order $k$ if $Y$ has $k$ columns.
     $\range(Y)$ is called a **left invariant subspace** or **left eigenspace** of $A$ satisfying $A^H\range(Y)\subseteq \range(Y)$.
 
+```
 
-*example*
+```{prf:example}
 
 $$
 AX = XB
@@ -46,21 +58,24 @@ $$
 
 So $\range(U_2)$ is a left invariant subspace of $A$, which satisfies $ \range(U_2) = \range(U_1)^\perp$. And if $S\subseteq \C^n$ is an eigenspace of $A$, then $S^\perp$ is a left eigenspace of $A$. We call $S^\perp$ the **complementary left eigenspace** of $S$.
 
+```
 
 Why would we want the upper block triangular instead of upper triangular?
 -> When we only want the real component in the triangular matrix.
 
-*lemma*
+
+````{prf:lemma}
 Let $A\in M_n(\R)$, $(\lambda, x)$ be one of its eigenpairs, then write $x = u + \ii v$, where $u, v \in \R^n$. Then, we have
-- $(\bar{\lambda}, \bar{x})$ is an eigenpair of $A$
-- If $\lambda \in \R$, then $(\lambda, u )$ is an eigenpair of $A$ if $u\neq 0$, and $(\lambda, v )$ is an eigenpair of $A$ if $v\neq 0$.
-- If $\lambda \notin \R$, then
-  1. $u, v \neq 0$
-  2. $u, v$ are linearly independent
+1. $(\bar{\lambda}, \bar{x})$ is an eigenpair of $A$
+1. If $\lambda \in \R$, then $(\lambda, u )$ is an eigenpair of $A$ if $u\neq 0$, and $(\lambda, v )$ is an eigenpair of $A$ if $v\neq 0$.
+1. If $\lambda \notin \R$, then
+    - $u, v \neq 0$
+    - $u, v$ are linearly independent
 
 
-*proof*
-1. 
+```{prf:proof}
+1. $(\bar{\lambda}, \bar{x})$ is an eigenpair of $A$ because
+   
    $$
    \begin{aligned}
         Ax &= \lambda x\\
@@ -100,9 +115,12 @@ Let $A\in M_n(\R)$, $(\lambda, x)$ be one of its eigenpairs, then write $x = u +
 
     Assume $u, v$ linearly dependent, then $v = \alpha u$ for some $\alpha\neq 0, \alpha \in \C$. But then $x = u+ \ii v = u(1+\ii\alpha)$, then $(\lambda, u)$ is also an eigenpair, while $u$ is real, which contradicts.
 
-BTW, if $\lambda \in R$, we usually consider real valued eigenvectors for it.
+BTW, if $\lambda \in \R$, we usually consider real valued eigenvectors for it.
 
-**Real Schur Decomposition**
+```
+````
+
+```{prf:definition} Real Schur Decomposition
 Let $A \in M_n(\R)$, then $\exists$ orthogonal $Q\in M_n(\R)$ s.t.,
 
 $$
@@ -117,3 +135,5 @@ $$
 which has following properties:
 
 - $T_{jj} \in M_1(\R) \text{ or } M_2(\R)$ and if $T_{jj}\in M_2(\R)$ then its eigenvalues are not real but complex conjugate pairs.
+
+```
