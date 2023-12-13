@@ -11,7 +11,7 @@ where $Q, V$ unitary and $S_1\in M_n(\R)$ with non-negative decreasing diagonal 
 Let $Q = \begin{bmatrix}Q_1 & Q_2\end{bmatrix}$ where $Q \in M_{m,n}(\C)$, then
 
 $$
-A = \begin{bmatrix} Q_1 & Q_2\end{bmatrix}
+A = \begin{bmatrix} Q_1 & Q_2\end{bmatrix}\begin{bmatrix} S_1\\0\end{bmatrix} V^H
 $$
 
 then
@@ -26,7 +26,7 @@ $$
 
 Note $H$ is Hermitian and it is positive semi-definite. Also $U^HU = VQ_1^HQ_1 V^H = I_n$, so $U$ has orthonormal columns. $A = UH$ with $U\in M_{m,n}(\C)$ orthonormal columns, $H \in M_n(\C)$ positive semi-definite, is the **polar decomposition** of $A$.
 
-If $A = UH$ polar decomposition, then 
+If polar decomposition $A = UH$, then 
 
 $$
 A^HA = HU^HUH = H^2\\
@@ -45,8 +45,9 @@ $$
 z = e^{\ii \theta} |z|.
 $$
 
-Note if $A\in M_n(\C)$ non-singular, then $U$ unqiue.
-
+```{Note}
+If $A\in M_n(\C)$ non-singular, then $U$ unqiue.
+```
 
 Analogy: $n = m = 1, z \neq0$ so that exist unique $\theta$ solution.
 
@@ -63,16 +64,17 @@ in which $K$ is the module $|A|$ and $U\in M_{m,n}(\C)$ is the orthonormal basis
 ## Norms
 Finite dimension vector space $V (\C^n)$ over scalar field $\R $ or $\C$.
 
-*definition*
+```{prf:definition}
 1. A **quasi-seminorm** is a function $\nu: V\to \R$ satisfying $\nu(x+y)=\nu(x)+\nu(y), \nu(\alpha x) = \alpha \nu(x)$, for all $x, y \in V, \alpha\ge 0, \alpha \in \R$.
 2. A **seminorm** is a function $\nu: V\to \R$ satisfying $\nu(x+y)\le \nu(x)+\nu(y), \nu(\alpha x) = |\alpha| \nu(x)$, for all $x, y \in V, \alpha \in \C$.
-   Note: $\nu(x)\ge 0, \, \forall x$ because,
+
+   Note: $\nu(x)\ge 0, \, \forall x$,
    
    $$
     \begin{align}
-    2 \nu &= \nu(x) + \nu(x)\\
+    2 \nu(x) &= \nu(x) + \nu(x)\\
     & = \nu(x) + \nu(-x)\\
-    & = \nu(x-x)\\
+    & \ge \nu(x-x)\\
     & = \nu(0)\\
     & = \nu(0 \cdot x)\\
     & = 0
@@ -80,13 +82,14 @@ Finite dimension vector space $V (\C^n)$ over scalar field $\R $ or $\C$.
    $$
 
 3. A norm is a function $\nu:V\rightarrow \R$ satisfying 
+   
    $$
    \nu(x+y) \le \nu(x)+\nu(y)\\
    \nu(\alpha x) = |\alpha|\nu(x)\\
    \nu(x) = 0 \Longleftrightarrow x = 0
    $$
-
-*example*
+```
+```{prf:example}
 Over $\C^n$, we commonly use 
 
 $$
@@ -110,10 +113,12 @@ For inner product space $V$, we can get $\|x\| = \sqrt{\langle x, x\rangle}$ and
 $$
 |\langle x, y \rangle| = [y]_B^H [x]_B \le \|x\|_2\|y\|_2.
 $$
+```
 
----
+
 Can use norms to measure distances. 
 
+```{prf:definition}
 A **metric** $\rho: V\times V \rightarrow \R$ satisfies $\forall x, y, z\in V$, 
 
 $$
@@ -125,14 +130,15 @@ $$
 
 
 For norm $\|\cdot\|$ over $V$, then $\rho(x, y) = \|x-y\|$ is a metric.
+```
 
+````{prf:proposition}
+Let $V$ finite dimension vector space with basis $B$ and norm $\|\cdot\|_2$. Then any norm $\|\cdot\| : V\rightarrow \R$ is a continuous function with respect to the metric arising from $\|\cdot\|_2$. 
 
-*proposition* Let $V$ finite dimension vector space with basis $B$ and norm $\|\cdot\|_2$. Then any norm $\|\cdot\| : V\rightarrow \R$ is a continuous function with respect to the metric arising from $\|\cdot\|_2$. 
+$\forall x \in V$, given $\epsilon \gt 0$, $\exists \delta \gt 0 \st \|x-y\|_2 \lt \delta \Rightarrow |\|x\|-\|y\|| \lt \epsilon, \, \forall y\in V$.
 
-$\forall x \in V$, given $\epsilon \gt 0$, $\exist \delta \gt 0 \st \|x-y\|_2 \lt \delta \Rightarrow |\|x\|-\|y\|| \lt \epsilon, \, \forall y\in V$.
-
-*proof*
-
+```{prf:proof}
+Start with
 
 $$
 \begin{align}
@@ -161,12 +167,13 @@ where $\beta = \begin{bmatrix}\|x_1\| \\ \vdots \\ \|x_n\|\end{bmatrix} $.
 Given $\epsilon \gt 0, \exists \delta = \frac{\epsilon}{2\|\beta\|_2} \st$, 
 
 $$
-\|x-y\|_2 \lt \underbrace{\frac{\epsilon}{2\|\beta\|_2}}_{\delta} \Rightarrow |\|x\|-\|y\|| \le \frac{\epsilon}{2}\lt \epsilon
+\|x-y\|_2 \lt \underbrace{\frac{\epsilon}{2\|\beta\|_2}}_{\delta} \Rightarrow |\|x\|-\|y\|| \le \frac{\epsilon}{2}\lt \epsilon.
 $$
 
+```
+````
 
-
-*proposition*
+```{prf:proposition}
 Let $V$ finite dimension vector space with basis $B$ and norm $\|\cdot \|_2$. Then any norm $\|\cdot\|$ has real numbers $c_1, c_2 \gt 0 \st$
 
 $$
@@ -174,3 +181,4 @@ c_1\|x\|_2 \le \|x\| \le c_2 \|x\|_2,
 $$
 
 for all $x\in V$.
+```

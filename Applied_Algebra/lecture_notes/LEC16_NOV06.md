@@ -3,7 +3,7 @@ Let $A\in M_n(\C)$, and $\series{\lambda}{k}$ are distinct eigenvalues and $\ser
 
 Note we can write that $T_i = \lambda_i I_{m_i}+N_i$, where $N_i$ is strictly upper triangular (upper triangular and $0$ on the diagonal).
 
-*definition*
+```{prf:definition}
 $N_i$ is **nilpotent**, if 
 
 $$
@@ -14,8 +14,10 @@ Here, $N_i^{m_i-1} = 0$.
 
 Note, nilpotent matrix have all eigenvalues $0$ and vice versus.
 
+```
+
 ## Jordan blocks
-*definition*
+````{prf:definition}
 A **Jordan block** of order $m$ is $J_m(\lambda) \in M_{m}(\C)$ and 
 
 $$
@@ -28,7 +30,7 @@ J_m(\lambda) = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-*property*
+```{prf:property}
 1. $J_m(0) = J_m(\lambda) - \lambda I_m$ and $\rank(J_m(0)) = m-1$
 2. $\lambda\in \sigma(J_m(\lambda))$ and $\am(\lambda) = m$
 3. For $J_m(\lambda), \gm(\lambda) = 1$ from rank-nullity theorem.
@@ -71,10 +73,12 @@ $$
 
 5. $J_m(0)^\top J_m(0) = \begin{bmatrix}0 & 0 \\ 0 & I_{m-1} \end{bmatrix}$, and $I_m - J_m(0)^\top J_m(0) = e_1 e_1^\top$.
 6. $J_{m+1} (0) = \begin{bmatrix} 0 & e_1^\top \\ 0 & J_m(0)\end{bmatrix}$
+```
+````
 
+````{prf:definition} Elementary Permutation Matrix
 
-*tool*
-**elementary permutation matrix** 
+Elementary permutation matrix $P_{ij}x$ swaps the $i, j$ entries of $x$ and leaving the rest of the vector same as before,
 
 $$
 P_{ij} = I - ww^T \in M_n(\R)
@@ -83,9 +87,9 @@ $$
 where $w = e_i - e_j$.
 
 
-$P_{ij}x$ swaps the $i, j$ entries of $x$ and leving the rest of the vector same as before.
 
-*Note*
+
+```{Note}
 1. For $B\in M_n(\C)$, then $P_{ij}B$ swaps the $i, j$ rows of $B$, while $BP_{ij}$ swaps the $i, j$ columns of $B$.
 
 
@@ -107,9 +111,10 @@ Note: permutation matrices are orthogonal but $P^2\neq I$ in general for $P$ per
 $$
 P^{-1} = P_{13}^\top P_{24}^\top P_{15}^\top P_{25}^\top \neq P
 $$
+```
+````
 
-
-*proposition*
+```{prf:proposition}
 For $N \in M_n(\C)$, strictly upper triangular, there exists $X\in M_n(\C)$ nonsingular and $\series{m}{k} \ge 1 \st$
 
 $$
@@ -120,9 +125,8 @@ $$
 
 *proof*
 Next lecture.
+```
 
-
----
 
 So for $T_i = \lambda_i I_{m_i} + N_i$, then $\exists X_i \in M_{m_i}(\C)$ and $m_{i1}, \dots, m_{ir_i} \ge 1, \st$
 

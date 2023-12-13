@@ -1,13 +1,13 @@
 # Lec 19 Nov 15
 
-*porposition*
+````{prf:proposition}
 For $A\in M_n(\C)$, then $F(A)\subseteq \C$ is **convex**. Meaning that given $\alpha, \beta \in F(A)$, then 
 
 $$
 \theta \alpha + (1-\theta) \beta \in F(A), \forall \theta \in (0, 1)
 $$
 
-*proof*
+```{prf:proof}
 $\alpha, \beta \in F(A) = \{x^HAx|x^Hx=1\} \Rightarrow \exists x, y \st x^HAx = \alpha, y^HAy = \beta \& x^Hx = y^Hy = 1$.
 
 Show $\exists z\in \C^n, \st \theta \alpha + (1-\theta)\beta = z^HAz$ where $z^Hz = 1$.
@@ -81,31 +81,32 @@ So intermediate value theorems says given any $\theta\in (0,1), \exists t \st \h
 
 
 > In the case $A$ is normal, it turns out that $F(A)$ is the convex hall of $\sigma(A)$.
+```
+````
 
-
-*proposition*
+````{prf:proposition}
 $A\in M_n(\C)$ Hermitian $\Longleftrightarrow F(A) \subseteq \R$.
 
-*Lemma*
+```{prf:lemma}
 For $A\in M_n(\C)$, $x^HAx = 0$ for all $x\in \C^n$. $\Longleftrightarrow A = 0$.
-
-*proof*
+```
+```{prf:proof}
 $(\Rightarrow)$ done before
 
-$(\Leftarrow)$ $\forall x\in C^n$, we have 
+$(\Leftarrow)$ $\forall A \in M_n(\C)$, we have $A = X + \ii Y$ in which $X, Y \in M_n(\C)$ are Hermitian. Then, we have $\forall x\in C^n$
 
 $$
 \underbrace{x^HAx}_{\text{real}} = x^H(X+\ii Y)x = x^HXx + \ii x^HYx
 $$
 
-Then $x^HYx = 0$, so $A = X$ is Hermitian.
+Since $x^HYx = 0$, $A = X$ is Hermitian.
+```
+````
 
-
----
 
 $A$ Hermitian, then $F(A) = [\lambda_n, \lambda_1]$, where $\lambda_n = \min{\sigma(A)}, \lambda_1 = \max{\sigma(A)}$.
 
-In Face, 
+In fact, 
 
 $$
 \lambda_n = \min{F(A)} = \min_{x^Hx=1}{x^HAx} = \min_{x\neq 0}{\frac{x^HAx}{x^Hx}} 

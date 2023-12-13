@@ -1,20 +1,23 @@
 # Lec 26 Dec 4
+
 Given nonsingular matrix $A\in M_n(\C)$, and vector norm $\|\cdot\|$, then we can define another vector norm
 
 $$
 \|x\|_{\|\cdot\|, A} = \|Ax\|
 $$
 
-which is called the vector norm induced by $A$.
+which is called the **vector norm induced** by $A$.
 
 Note if $A$ is singular, then $\|x\|_{\|\cdot\|, A}$ is still a seminorm.
 
 
-*example*
+```{prf:example}
 
 $$
 \|x\|_{\|\cdot\|_2, A} = \|Ax\|_2 = \sqrt{x^HA^HAx}
 $$
+
+```
 
 
 If $A\in M_n(\C)$ is positive definite,  then we can define
@@ -28,8 +31,9 @@ which is called the **elliptic norm**.
 In fact, $\|x\|_A = \sqrt{x^HAx} = \sqrt{x^HA^{\frac{1}{2}}A^{\frac{1}{2}}x} = \|x\|_{\|\cdot\|_2, A^{\frac{1}{2}}}$. 
 
 
+```{Note}
 Elliptic norm is an example of a norm that is not absolute.
-
+```
 ---
 (Above is the content for final.)
 

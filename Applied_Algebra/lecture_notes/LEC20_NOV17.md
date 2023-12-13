@@ -11,6 +11,7 @@ $$
 
 ## Cournt-Fischer Theorem
 
+```{prf:theorem} Cournt-Fischer Theorem
 Suppose $A\in M_n(\C)$ Hermitian, and its eigenvalues in order,
 
 $$
@@ -24,15 +25,17 @@ $$
 \lambda_k(A) = \max_{\substack{S\subseteq \C^n, \\\dim S = k}} \min_{\substack{x\in S, \\x\neq 0}} \frac{x^HAx}{x^Hx}\\
 \lambda_k(A) = \min_{\substack{S\subseteq\C^n,\\ \dim S = n-k+1}} \max_{\substack{x\in S,\\ x\neq 0}} \frac{x^HAx}{x^Hx}
 $$
+```
 
-*lemma*
+
+````{prf:lemma}
 Let subspaces $S_1, S_2 \in C^n$ satisfying $\dim(S_1)\lt \dim(S_2)$, then 
 
 $$
 S_2 \cap S_1^\top \neq \{0\}.
 $$
 
-*proof*
+```{prf:proof}
 
 $$
 \begin{align}
@@ -43,16 +46,17 @@ $$
     \dim(S_2 \cap S_1^\top) & \ge 1
 \end{align}
 $$
+```
+````
 
-
-*proof* Courant-Fischer
+```{prf:proof} Courant-Fischer
 
 $A$ Hermitian $\Rightarrow \exists$ $n$ orthonormal eigenvectors of $A$, $\series{x}{n} \st X = [x_1, \dots, x_n]$ unitary, with $X^HAX = \Lambda = \lambda_1\oplus \dots \oplus \lambda_n$.
 
 Fix $1\le i\le n$, let subspace $S\subseteq \C^n$ and $\dim(S) = i$. Then, learn on $S$ and $\span{x_1, \dots, x_{i-1}}$.
 
 $$
-S\cap\{x_1, \dots, x_{i-1}\}^\top \neq \{0\}
+S\cap\{x_1, \dots, x_{i-1}\}^\perp \neq \{0\}
 $$
 
 so $\exists z\neq 0, z\in S \st z\perp \span{x_1, \dots, x_{i-1}}$ .
@@ -93,13 +97,13 @@ $$
 $$
 
 *Note* the second expression has similar proof.
-
+```
 
 we will use the notation $\lambda_1(A), \dots, \lambda_n(A)$ for eigenvalues satisfying $\lambda_n(A) \le \dots \le \lambda_1(A)$.
 
 Some people may also use the notation of ordering eigenvalues as $\lambda_n\ge \dots \ge \lambda_1$, which might need to swap terms to fit our result.
 
-*proposition*
+````{prf:proposition}
 Let $A \in M_n(\C)= \begin{bmatrix}A_{11} & A_{12}\\ A_{21} & A_{22}\end{bmatrix}$ Hermitian, where $A_{11}\in M_m(\C)$. Then 
 
 $$
@@ -108,7 +112,7 @@ $$
 
 for all $1\le k\le m$.
 
-*proof*
+```{prf:proof}
 
 Given subspace $T\in \C^m$ with $\dim(T) = k\le m$, extend it to $S_T = \left\{\begin{bmatrix}y \\ 0\end{bmatrix}\in \C^n | y\in T\right\}\subseteq \C^n$
 
@@ -134,3 +138,5 @@ The other inequality done similarly with the second expression of Corant-Fischer
 
 
 **Eigenvalue interlacing results**
+```
+````

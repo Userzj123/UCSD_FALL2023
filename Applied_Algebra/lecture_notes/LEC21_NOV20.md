@@ -9,14 +9,14 @@ $$
 $$
 
 
-*proposition*
+````{prf:proposition}
 Let $C = A+B$ where $A, B\in M_n(\C)$ Hermitian. Then, $\forall 1\le k\le n$,
 
 $$
 \lambda_k(A)+\lambda_n(B)\le \lambda_k(C)\le \lambda_k(A) + \lambda_1(B),
 $$
 
-*proof*
+```{prf:proof}
 Consider
 
 $$
@@ -37,8 +37,8 @@ $$
 \begin{aligned}
 \lambda_k(C) &= \min_{\substack{S\subseteq\C^n,\\ \dim S = n-k+1}} \max_{\substack{x\in S,\\ x\neq 0}} \frac{x^HCx}{x^Hx}\\
 & \le \max_{\substack{x\in W,\\ x\neq 0}} \frac{x^HCx}{x^Hx}\\
-& \le \max_{\substack{x\in W,\\ x\neq 0}} \frac{x^HAx}{x^Hx} +  \max_{\substack{x\in W,\\ x\neq 0}} \frac{x^HAx}{x^Hx}\\
-& \le \lambda_k(A) + \underbrace{\max_{\substack{x\in \C^n, \\ x\neq 0}} \frac{x^HBx}{x^Hxs}}_{\lambda_1(B)}.
+& \le \max_{\substack{x\in W,\\ x\neq 0}} \frac{x^HAx}{x^Hx} +  \max_{\substack{x\in W,\\ x\neq 0}} \frac{x^HBx}{x^Hx}\\
+& \le \lambda_k(A) + \underbrace{\max_{\substack{x\in \C^n, \\ x\neq 0}} \frac{x^HBx}{x^Hx}}_{\lambda_1(B)}.
 \end{aligned}
 $$
 
@@ -52,8 +52,9 @@ $$
 \end{aligned}
 $$
 
+```
 
-*example*
+```{prf:example}
 
 Let $A\in M_n(\C)$ Hermitian and $z\in \C^n\setminus\{0\}$, study $C = A+\underbrace{zz^H}_{\text{Hermitian }B}$
 
@@ -68,9 +69,10 @@ $$
 $$
 \lambda_k(A) - 0 \le \lambda_k(C) \le \lambda_k(A) + z^Hz
 $$
+```
+````
 
-
-*proposition*
+````{prf:proposition}
 Let Hermitian matrix $A\in M_n(\C)$ and let $C = A + zz^H$ for some $z\in \C^n$, then
 
 $$
@@ -78,7 +80,7 @@ $$
 \lambda_k(A)\le \lambda_{k-1}(C), \forall 2\le k\le n
 $$
 
-*Lemma*
+```{prf:lemma}
 For subspace $W\subseteq \C^n$ and $z \in \C^n$, then 
 
 $$
@@ -88,9 +90,9 @@ $$
 &\ge \dim(W) - 1\\
 \end{aligned}
 $$
+```
 
-
-*proof*
+```{prf:proof}
 Start with
 
 
@@ -107,7 +109,7 @@ $$
 \begin{aligned}
 \lambda_{k+1}(C) &= \min_{\substack{x\in W, \\ x\neq 0}} \frac{x^HCx}{x^Hx},\\
 & \le \min_{\substack{x\in V, \\ x\neq 0}} \frac{x^HCx}{x^Hx},\\
-& = \min_{\substack{x\in W, \\ x\neq 0}} \frac{x^HAx}{x^Hx},\\
+& = \min_{\substack{x\in V, \\ x\neq 0}} \frac{x^HAx}{x^Hx},\\
 & \le  \max_{\substack{S\subseteq \C^n, \\\dim S = \dim V}} \min_{\substack{x\in S, \\x\neq 0}} \frac{x^HAx}{x^Hx}\\
 & = \lambda_{\dim V}(A) \\
 & \le \lambda_k(A)
@@ -116,7 +118,10 @@ $$
 
 Note other inequality similar using other form of Courant-Fisher.
 
-*Corollary*
+```
+````
+
+```{prf:corollary}
 Hermitian matrix $A \in M_n(\C)$, Let $C = A \pm zz^H$ for some $z\in \C^n$, then
 
 $$
@@ -125,37 +130,42 @@ $$
 $$
 
 since $A = C\mp zz^H$. Same as previous proposition.
+```
 
-
-*definition*
+```{prf:definition}
 Hermitian matrix $A\in M_n(\C)$ is called **positive definite** i.f.f. $x^*Ax \gt 0 \forall x\in \C^n \setminus \{0\}$. And it is **positive semidefinite** i.f.f. $x^HAx \ge 0 \forall x\in \C^n$.
 
 It is possible to define for $\F = \R$ and $A\in M_n(\R)$, $x^\top Ax \gt 0, \forall x\in \R^n\setminus\{0\}$ as beging positive definite. Here $A$ positive definite does not necessarily imply $A$ symmetric. Mostly in this setting, work with symmetric positive definite (SPD).
+```
 
-*proposition*
+````{prf:proposition}
 Let $A\in M_n(\C)$ be Hermitian, then
 
 1. $A$ positive semidefinite i.f.f. $\lambda \ge 0, \forall \lambda \in \sigma(A)$
-1. $A$ positive definite i.f.f. $\lambda \gt 0, \forall \lambda \in \sigma(A)$
+2. $A$ positive definite i.f.f. $\lambda \gt 0, \forall \lambda \in \sigma(A)$
 
-*proof*
-1. (forward) $\lambda \in \sigma(A)$ means $(\lambda, x)$ is eigenpair of $A$ for some $x\in \C^n\setminus\{0\}$, then 
+```{prf:proof}
+I. 
+(forward) $\lambda \in \sigma(A)$ means $(\lambda, x)$ is eigenpair of $A$ for some $x\in \C^n\setminus\{0\}$, then 
 
-    $$
-    \lambda = \frac{x^HAx}{x^Hx} \ge 0
-    $$
+$$
+\lambda = \frac{x^HAx}{x^Hx} \ge 0
+$$
 
-    (backward) $\lambda \ge 0, \forall \lambda \in \sigma(A)$ means that $\displaystyle\min_{\lambda \in \sigma(A)} \ge 0$. Then, for some $x\in \C^n$ satisfies $x^Hx = 1$,
+(backward) $\lambda \ge 0, \forall \lambda \in \sigma(A)$ means that $\displaystyle\min_{\lambda \in \sigma(A)} \lambda\ge 0$. Then, for some $x\in \C^n$ satisfies $x^Hx = 1$,
 
-    $$
-    x^HAx \ge \lambda = \frac{x^HAx}{x^Hx} \ge 0.
-    $$
+$$
+x^HAx \ge\min_{\lambda \in \sigma(A)} \lambda\ge 0.
+$$
 
-    Thus, $\forall x\in \C^n\setminus\{0\}$, 
+Thus, $\forall x\in \C^n\setminus\{0\}$, 
 
-    $$
-    \frac{x^HAx}{x^Hx} \ge 0.
-    $$
+$$
+\frac{x^HAx}{x^Hx} \ge 0.
+$$
 
-2. Similarly.
+II.
+Similarly.
 
+```
+````

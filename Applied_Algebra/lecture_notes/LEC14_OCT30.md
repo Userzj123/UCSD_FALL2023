@@ -1,20 +1,20 @@
 # Lec 14
 Start from block triangular form (such as Schur decomposition), 
 
-Easy case first,
+Easy case first, given block upper triangular matrix,
 
 $$
 T = \begin{bmatrix}
-    T_{11} & T_{12} \\ T_{21} & T_{22}
+    T_{11} & T_{12} \\ 0 & T_{22}
 \end{bmatrix}\in M_n(\C), T_{11} \in M_k(\C)
 $$
 
-*example*
-Scalars instead of bloks
+```{prf:example}
+Scalars instead of blocks
 
 $$
 T = \begin{bmatrix}
-    t_{11} & t_{12} \\ t_{21} & t_{22}
+    t_{11} & t_{12} \\ 0 & t_{22}
 \end{bmatrix}, 
 $$
 
@@ -34,7 +34,9 @@ WT = \begin{bmatrix}
 \end{bmatrix}\dots
 $$
 
-Note $W^{-1} = \begin{bmatrix} 1 & z \\ 0 & 1\end{bmatrix}$ and $WTW^{-1} = \begin{bmatrix} t_{11} & t_{11}z + t_{12} - zt_{21}\\ 0 & t_{22}\end{bmatrix}$, can find $z = -\frac{t_{12}}{t_{11} - t_{22}}$ to get block diagonal matrix if $t_{11}\neq t_{22}$.
+Note $W^{-1} = \begin{bmatrix} 1 & z \\ 0 & 1\end{bmatrix}$ and $WTW^{-1} = \begin{bmatrix} t_{11} & t_{11}z + t_{12} - zt_{22}\\ 0 & t_{22}\end{bmatrix}$, can find $z = -\frac{t_{12}}{t_{11} - t_{22}}$ to get block diagonal matrix if $t_{11}\neq t_{22}$.
+
+```
 
 Back to blocks, let $Z \in M_{k, n-k} (\C)$, then
 
@@ -58,13 +60,14 @@ T_{11}Z + T_{12} - ZT_{22}  = 0 .
 $$
 
 
-Study **Sylvester equation**,
+```{prf:definition} Sylvester equation
 
 $$
 AX - XB = C,
 $$
 
 where $A\in M_m(\C), B\in M_n(\C), C\in M_{m, n}(\C), X\in M_{m, n}(\C)$.
+```
 
 In this is the Sylvester operator:
 
@@ -87,6 +90,8 @@ $$
     & = AY-YT
 \end{aligned}
 $$
+
+in which $T$ is upper triangular and $Q$ is unitary (Schur Decomposition).
 
 $$
 \begin{aligned}
@@ -129,9 +134,10 @@ Continues induction
 
 
 
-*Conclusion*
-If $\sigma(B)\cap \sigma(A) = \phi$, then $S$ is 1-1 and can find $X$ s.t. $AX - XB = C, \forall \in M_{m, n}(\C)$.
+````{Note}
+If $\sigma(B)\cap \sigma(A) = \phi$, then $S$ is 1-1 and can find $X$ s.t. $AX - XB = C, \forall C \in M_{m, n}(\C)$.
 
+```{prf:example}
 
 
 Now if $\lambda $ eigenvalue of $A$ and of $B$ then let $x$ be the corresponding eigenvector for $A$, and $y$ be the corresponding left eigenvector for $B$,
@@ -140,16 +146,18 @@ Consider $xy^H \neq 0$, then
 
 $$
 \begin{aligned}
-    S(xy^H) & = Axy^H  - xy^H A\\
+    S(xy^H) & = Axy^H  - xy^H B\\
     & = \lambda xy^H - x\lambda y^H\\
     & = 0
 \end{aligned}
 $$
 
 and $S$ not 1-1.
+```
+````
 
 
-*proposition*
+```{prf:proposition}
 
 For $A\in M_{m}(\C), B\in M_n(\C)$,  
 
@@ -157,6 +165,7 @@ $$
 \sigma(A)\cap\sigma(B) = \phi \Longleftrightarrow AX- XB = 0 \text{ if and only if } X = 0 \\
 \Longleftrightarrow \forall C\in M_{m, n}(\C), \exists X\in M_{m, n}(\C) \text{ s.t } AX-XB = C
 $$
+```
 
 If $\alpha$ eigenvalue of $A$, corresponding eigenvector $x$ and $\beta$ eigenvalue of $B$, correponding eigenvector $y$, so
 

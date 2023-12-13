@@ -1,9 +1,9 @@
 # Lec 17 Nov 8
 
-*proposition*
+````{prf:proposition}
 $N \in M_n(\C)$, strictly upper triangular is similar to direct sum of Jordan blocks.
 
-*proof*
+```{prf:proof}
 Induction
 
 Initial step n = 1
@@ -213,11 +213,11 @@ $$
 
 which is a sum of Jordan blocks.
 
+```
+````
 
 
-
-*Consequence*
-**Jordan Canonical Form**
+```{prf:definition} Jordan Canonical Form
 Let $A\in M_n(\C)$ with distinct eigenvalues $\series{\lambda}{k}$ with multiplicity $\series{m}{k}$ with $\sum_i m_i = n$. Then $\exists m_{ij}, 1\le i\le k, 1\le j\le r_i$, with $m_i = \sum_{j=1}^{r_i} m_{ij}$ and nonsingular $X\in M_n(\C) \st$ 
 
 $$
@@ -225,8 +225,9 @@ X^{-1}AX = J = J_1\oplus \dots \oplus J_k
 $$
 
 in which $J_i = J_{m_{i1}}(\lambda_i) \oplus \dots \oplus J_{m_{ir_i}}(\lambda_i)$.
+```
 
-*example*
+```{prf:example}
 
 $$
 J = \begin{bmatrix}
@@ -240,7 +241,7 @@ J = \begin{bmatrix}
     & & & & & 0& 0& 2&\\
 \end{bmatrix}
 $$
-
+```
 
 structure of J:
 

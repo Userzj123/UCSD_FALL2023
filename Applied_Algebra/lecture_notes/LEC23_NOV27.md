@@ -12,9 +12,9 @@ where $\sigma_1 \ge \dots \ge \sigma_r \gt 0$.
 
 Notation:
 
-Let $p = \min\{m, n\}$ and let $\sigma_m = \dots = \sigma_p = 0$. Then $\sigma_i, \, \forall 1\le i\le p$ is a **singular value** of $A$, and $\sigma_1, \dots, \sigma_p$ are **ordered singular values** of $A$. ALso the first p columns of $V$ are **right singular vector** and the first p columns of $U$ are **left singular vectors**. 
+Let $p = \min\{m, n\}$ and let $\sigma_m = \dots = \sigma_p = 0$. Then $\sigma_i, \, \forall 1\le i\le p$ is a **singular value** of $A$, and $\sigma_1, \dots, \sigma_p$ are **ordered singular values** of $A$. Also the first p columns of $V$ are **right singular vector** and the first p columns of $U$ are **left singular vectors**. 
 
-*properties*
+```{prf:property}
 1. If $U = [u_1 \dots u_m], V = [v_1 \dots v_n]$, then $\forall 1\le j \le p$,
    
    $$
@@ -41,7 +41,9 @@ Let $p = \min\{m, n\}$ and let $\sigma_m = \dots = \sigma_p = 0$. Then $\sigma_i
    $$
 
 
-<!-- S is unique to A. what about U and V-->
+```
+
+<span style="color:navy;font-weight:bold">S is unique to A. what about U and V?</span>
 
 Suppose $USV^H = A = \hat{U}S\hat{V}^H$, then
 
@@ -56,7 +58,7 @@ $$
 S^\top S = \mu_1 I_{m_1} \oplus \dots \oplus \mu_s I_{m_s} \in M_n(\R)
 $$
 
-where $\mu_1 \gt \dots \gt \mu_s$. And $\sum_{i=1}^{s-1} m_i = r$ and $m_j = n-r$.
+where $\mu_1 \gt \dots \gt \mu_s$. And $\sum_{i=1}^{s-1} m_i = r$ and $m_s = n-r$.
 
 Let 
 
@@ -88,7 +90,7 @@ $$
 \end{align}
 $$
 
-so in face $C_{ij} = 0$ if $i\neq j$ and $C = C_{11} \oplus \dots \oplus C_{ss}$. Then $V = \hat{V} C$. Similarly, $U = \hat{U}B$, where $B$ unitary block diagonal with same nonzero partition as $C$.
+so in fact $C_{ij} = 0$ if $i\neq j$ and $C = C_{11} \oplus \dots \oplus C_{ss}$. Then $V = \hat{V} C$. Similarly, $U = \hat{U}B$, where $B$ unitary block diagonal with same nonzero partition as $C$.
 
 $$
 B = B_{11} \oplus \dots \oplus B_{ss}\\
@@ -106,7 +108,7 @@ $$
 
 this then implies $B_{ii} = C_{ii}, \, \forall 1\le i\le s-1$. This gives
 
-*proposition*
+```{prf:proposition}
 Given $A \in M_{m,n}(\C)$, if $U^HAV = \hat{U}^HA\hat{V} = S$ where $U, \hat{U} \in M_{m}(\C)$ unitary and $V, \hat{V}\in M_n(\C)$ unitary. And 
 
 $$
@@ -123,9 +125,11 @@ C = B_{11}\oplus \dots \oplus B_{s-1, s-1}\oplus C_{ss} \in M_n(\C)
 $$
 
 where $B_{ii} \in M_{m_i}(\C) \st U = \hat{U}B, V = \hat{V}C$.
-<!-- Not unique -->
 
-*note*
+<span style="color:navy;font-weight:bold"> Left and right eigenvector matrices $U$ and $V$ are not unique</span>
+```
+
+```{Note}
 1. If $A\in M_n(\C)$ and all singular values of $A$ are distinct and nonzero, then each right singular vector $v_j$ can only differ by scalar multiple of $e^{\ii \theta}$ for some $\theta \in [0, 2\pi)$.
 2. When $A\in M_n(\C)$ and positive semi-definite. Then 
    
@@ -144,7 +148,7 @@ where $B_{ii} \in M_{m_i}(\C) \st U = \hat{U}B, V = \hat{V}C$.
    the **modules** of $A$[^reading_svd]. 
 
 [^reading_svd]: [link](https://math.stackexchange.com/questions/1927845/is-u-v-in-the-svd-of-a-symmetric-positive-semidefinite-matrix).
-
+```
 
 Courant-Fisher says $p = \min\{m,n\}$ and $\sigma_1 \ge \dots \ge \sigma_p$ ordered singular values for $1\le i\le p$. 
 

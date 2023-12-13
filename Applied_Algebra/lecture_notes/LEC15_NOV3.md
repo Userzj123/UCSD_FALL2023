@@ -8,13 +8,11 @@ $$
 
 Also read as $T_{11}Z - ZT_{22} = -T_{12}$, or alternatively $T_{11}Y - YT_{22} = T_{12}$.
 
-*proposition*
+```{prf:proposition}
 For $A\in M_m(\C), B\in M_n(\C)$, $\lambda$ is an eigenvalue of $S:M_{m,n}(\C) \rightarrow M_{m,n}(\C) ( X \rightarrow AX-XB)$ i.f.f. $\lambda = \alpha - \beta$, where $\alpha \in \sigma(A), \beta \in \sigma(B)$.
+```
 
-
----
-
-*definition*
+```{prf:definition}
 Define the **Kronecker or tensor product** of matrices $C, E$ as
 
 $$
@@ -24,8 +22,9 @@ C\otimes E = \begin{bmatrix}
     c_{n1}E & \dots & c_{nn}E
 \end{bmatrix}.
 $$
+```
 
----
+
 
 According to the definition of Kronecker production of two matrices, we have the matrix representation of $S$ as
 
@@ -41,10 +40,10 @@ X = \sum_{i, j} \alpha_{ij} E_{ij}.
 $$
 
 
-*proposition*
+````{prf:proposition}
 If $\series{\alpha}{m}$ are the eigenvalues of $A$ and $\series{\beta}{n}$ are the eigenvalues of $B$, then the eigenvalues of $I_n \otimes A - B^\top\otimes I_m$ are $\alpha_i - \beta_j, 1\le i\le m$ and $1\le j \le n$.
 
-*proof*
+```{prf:proof}
 Let
 
 $$
@@ -110,9 +109,9 @@ $$
 $$
 
 
-<span style='color:red'> Must the diagonal of upper triangular be eigenvalues?</span>
-
----
+<span style='color:navy;font-weight:bold'> Must the diagonal of upper triangular be eigenvalues?</span>
+```
+````
 
 We started from $\begin{bmatrix} T_{11} & T_{12}\\ 0 & T_{22} \end{bmatrix}$ and get to $\begin{bmatrix} T_{11} & 0 \\ 0 & T_{22}\end{bmatrix}$. How about starting even earlier from a general matrix?
 
@@ -122,13 +121,15 @@ $$
 \begin{bmatrix} X_1^H \\ Y_2^H \end{bmatrix}A \begin{bmatrix} X_1 & Y_2  \end{bmatrix} = \begin{bmatrix} B_1 & C \\ 0 & B_2 \end{bmatrix},
 $$
 
-for some $B_2$ , $C$, and  $\sigma(B_1) \cap \sigma(B_2) = \phi$. So $\exists Z$ satisfying $B_1Z - ZB_2 = -C$ s.t.
+for some $B_2$ , $C$, and  $\sigma(B_1) \cap \sigma(B_2) = \emptyset$. So $\exists Z$ satisfying $B_1Z - ZB_2 = -C$ s.t.
 
 $$
 \begin{bmatrix}
     I_k & -Z\\ 0 & I_{n-k}
 \end{bmatrix}\begin{bmatrix}
     B_1 & C \\ 0 & B_2
+\end{bmatrix}\begin{bmatrix}
+    I_k & Z \\ 0 & I_{n-k}
 \end{bmatrix} = 
 \begin{bmatrix}
     B_1 & 0\\ 0 & B_2
@@ -172,14 +173,14 @@ $$
 \begin{bmatrix} B_1 & 0 \\ 0 & B_2 \end{bmatrix} = \begin{bmatrix} X_1^H - ZY_2^H\\ Y_2^H \end{bmatrix} A \begin{bmatrix} X_1 & X_1Z+Y_2 \end{bmatrix} = \begin{bmatrix} Y_1^H \\ Y_2^H \end{bmatrix} A \begin{bmatrix} X_1 & X_2 \end{bmatrix}
 $$
 
-so we have the **spectral representation of A**,
+```{prf:definition} spectral representation of A
 
 $$
 A = \begin{bmatrix} X_1 & X_2 \end{bmatrix} \begin{bmatrix} B_1 & 0 \\ 0 & B_2 \end{bmatrix} \begin{bmatrix} Y_1^H \\ Y_2^H \end{bmatrix} = X_1B_1Y_1^H + X_2 B_2 Y_2^H
 $$
+```
 
-
-Note:
+```{Note}
 1. basis $\begin{bmatrix} X_1 & X_2 \end{bmatrix}$ is not necessarily unitary.
 2. orthogonality
    
@@ -200,7 +201,7 @@ Note:
     \end{bmatrix}
     $$
 
-    as long as $\sigma(B_i) \cap \sigma(B_j) = \phi$.
+    as long as $\sigma(B_i) \cap \sigma(B_j) = \emptyset$.
     
     *Notation*:
 
@@ -212,3 +213,4 @@ Note:
         & & & B_r
     \end{bmatrix} = B_1 \oplus B_2 \oplus \dots \oplus B_r.
     $$
+```

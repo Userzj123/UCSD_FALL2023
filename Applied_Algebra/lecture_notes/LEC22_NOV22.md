@@ -1,35 +1,41 @@
 # Lec 21 Nov 22
 
-*Non-square Matrix*
-
+## Non-square Matrix
+```{prf:remark}
 Let $A \in M_{m, n}(\C)$, then
 
-1. $A^HA \in M_n(\C)$ is positive semi-definite because 
+1. $A^HA \in M_n(\C)$ is **positive semi-definite** because 
+   
    $$
    x^HA^HAx = (Ax)^HAx \ge 0
    $$
-1. $\rank(A^HA) = \rank(A)$
-1. $\rank(A) = \#\{\lambda \gt 0 | \underbrace{\lambda \in \sigma(A^HA)}_{\text{multiset}}\}$
 
-Can apply to $A^H$ to get properties on $AA^H$.
+2. $\rank(A^HA) = \rank(A)$
+3. $\rank(A) = \#\{\lambda \gt 0 | \underbrace{\lambda \in \sigma(A^HA)}_{\text{multiset}}\}$
 
-*proposition*
+All results can be applied to $A^H$ to get properties on $AA^H$.
+```
+
+
+```{prf:proposition}
 Let $A \in M_{m,n}(\C)$, then
 
 $$
 \{\lambda \gt 0 | \lambda \in \sigma(A^HA)\} = \{\lambda \gt 0 | \lambda \in \sigma(AA^H)\}
 $$
 
-as multiset. This follows from 
+as multiset. 
+```
+This follows from 
 
-*lemma*
+````{prf:lemma}
 Let $A \in M_{m,n}(\C), B\in M_{n,m}(\C)$, then
 
 $$
 \{\lambda \neq 0 | \lambda \in \sigma(BA)\} = \{\lambda \neq 0 | \lambda \in \sigma(AB)\}
 $$
 
-*proof*
+```{prf:proof}
 
 Note 
 
@@ -40,11 +46,22 @@ $$
 $$
 
 Thus, $\begin{bmatrix} BA & B \\ 0 & 0\end{bmatrix} \sim \begin{bmatrix}0 & B \\ 0 & AB\end{bmatrix}$.
+```
+````
+
 
 ## Singular Value Decomposition
-Given $A\in M_{m,n}(\C)$ with $\rank(A) = r$, then there exist unitary $U\in M_{m}(\C)$ and $V\in M_n(\C) \st U^HAV = S\in M_{m, n}(\R)$, where $S = \begin{bmatrix}S_1 & 0 \\ 0 & 0\end{bmatrix}$, for $S_1 = \sigma_1\oplus\dots \oplus \sigma_r \in M_r(\R)$, and $\sigma_1 \ge \dots \ge \sigma_r\gt 0$.
 
-*proof*
+````{prf:theorem}
+Given $A\in M_{m,n}(\C)$ with $\rank(A) = r$, then there exist unitary $U\in M_{m}(\C)$ and $V\in M_n(\C) \st$
+
+$$
+U^HAV = S\in M_{m, n}(\R),
+$$
+
+where $S = \begin{bmatrix}S_1 & 0 \\ 0 & 0\end{bmatrix}$, for $S_1 = \sigma_1\oplus\dots \oplus \sigma_r \in M_r(\R)$, and $\sigma_1 \ge \dots \ge \sigma_r\gt 0$.
+
+```{prf:proof}
 Consider $A^HA$ which has $r$ positive eigenvalues, and $n-r$ are zero eigenvalues. We use notation:
 
 $$
@@ -80,8 +97,8 @@ V^HA^HAV = \begin{bmatrix}
 $$
 
 
-Note $V_2^HA^HAV_2 = (AV_2)^HAV_2 = 0 \Rightarrow V_2 = 0$.
-<span style="color:red"> Isn't it $AV_2 = 0$</span>
+Note $V_2^HA^HAV_2 = (AV_2)^HAV_2 = 0 \Rightarrow AV_2 = 0$.
+
 Thus, 
 
 $$
@@ -130,9 +147,12 @@ $$
 
 Also $\sigma_1, \dots, \sigma_r$ are unitarily invariant. If $\hat{U}, \hat{V}$ unitary, then $\sigma_1, \dots, \sigma_r$ of $A$ are the same of those of $\hat{U}^HA\hat{V}$. This is because $\sigma(A^HA) = \sigma(\hat{U}^HA^H\hat{V}\hat{V}^HA\hat{U})$.
 
-Finally note, proof works for $A\in M_{m,n}(\R)$ with $U\in M_m(\R), V\in M_n(\R)$ orthogonal to get **real SVD**,
+Finally note, proof works for $A\in M_{m,n}(\R)$ with $U\in M_m(\R), V\in M_n(\R)$ orthogonal to get **real SVD**.
 
-*definition* Real SVD
+```
+````
+
+```{prf:definition} Real SVD
 Given $A\in M_{m,n}(\R)$, $\exists U\in M_m(\R), V\in M_n(\R)$ orthogonal, $r = \rank(A)$ such that
 
 $$
@@ -148,3 +168,4 @@ S = \begin{bmatrix}
 $$
 
 where $\sigma_j = \lambda_j(A^\top A)$.
+```
